@@ -189,9 +189,127 @@ $(document).ready(function(){
 
    
 </script> -->
+<!-- praveen scrippt -->
+<script>
+$(document).ready(function(){
+	$("input[name='r1']").change(function(){
+		
+	var qty = $("#qty").val();
+	var result=$("#result").val();
+	if (qty=="") {
+		alert("please select a quantity");
+	return;
+	}
+	var numbers = /^[0-9]+$/;
+	if(qty.match(numbers)){
+	}
+	else{
+		alert("Enter valid phone no");
+	}
+
+	
+
+	var status = '';
+
+	$.ajax({ 
+
+	type : "Post", 
+
+	url : "checkQty", 
 
 
+	data: "qty=" + escape(qty) + "&result=" +escape(result),
 
+	success : function(data) {
+		status = data;
+		
+		if(data=="false"){
+			alert("Selected quantity cannot be availed for selected scheme");
+			$("#qty").val('');
+			 $('#qty').focus();
+		
+		}else {
+			
+		}
+	
+
+	}, 
+
+	error : function(e) { 
+
+
+	alert('Error: ' + e); 
+	
+
+	} 
+
+	}); 
+	
+
+	});
+	
+	$("input[name='qty']").blur(function(){
+		
+		var qty = $("#qty").val();
+		
+		if (qty=="") {
+			alert("please select a quantity");
+		return;
+		}
+		var numbers = /^[0-9]+$/;
+		if(qty.match(numbers)){
+		}
+		else{
+			alert("Enter valid phone no");
+		}
+
+		
+
+		var status = '';
+
+		$.ajax({ 
+
+		type : "Post", 
+
+		url : "checkQtywithnoscheme", 
+
+
+		data: "qty=" + escape(qty),
+
+		success : function(data) {
+			status = data;
+			
+			if(data=="false"){
+				alert("Selected quantity cannot be availed");
+				$("#qty").val('');
+				 $('#qty').focus();
+			
+			}else {
+				
+			}
+		
+
+		}, 
+
+		error : function(e) { 
+
+
+		alert('Error: ' + e); 
+		
+
+		} 
+
+		}); 
+		
+
+		});
+
+	});
+function displayResult(r1)
+{
+document.getElementById("result").value=r1;
+}
+</script>
  <script>
     
 //****************************************MRINAL SCRIPT**********************************************
@@ -436,7 +554,7 @@ function setdata(tmp){
 	<!--Menu Section-->
 	<div class="middle-container">
 
-
+<form action="addtocart" method="get">
 		<br /> <br /> <br /> <br /> <br /> <br />
 
 		<%-- ProductId:  ${list1.product.productId} --%>
@@ -452,10 +570,11 @@ function setdata(tmp){
 
 		<img src="${path}" align="top"></img> <br />
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity:<input
-			type="text" value="" size="2" />
+			type="text" value="" name="qty" id="qty" size="2" />
 
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="addtocart">Add
-		to Cart</a><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- <a href="addtocart">Add
+		to Cart</a><br /> -->
+		<input type="submit" name="addtocart" value="Add To Cart"></input>
 
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<a href="addtowish" >Add to WishList</a><br />
@@ -467,14 +586,14 @@ function setdata(tmp){
 				<c:forEach var="discount" items="${listDiscount}">
 					<tr>
 						<td><input id="me" type="radio" name="selectedId"
-							value="${discount.offer.schemeId}" /></td>
+							value="${discount.offer.schemeId}" onclick="displayResult(this.value)"/></td>
 						<td><c:out value="${discount.offer.schemeDescription}"></c:out></td>
-
 					</tr>
 				</c:forEach>
 			</table>
+			<input type="hidden" id="result" name="result">
 		</div>
-
+</form>
 		<div class="sub-middle-container" align="center">
 
 			<div id="anotherSection2">

@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -18,12 +19,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.cg.domain.CustomerDetails;
 import com.cg.domain.Feedback;
+import com.cg.domain.JoinOrdersTransaction;
 import com.cg.domain.Media;
 import com.cg.domain.MediaPath;
 import com.cg.domain.Product;
 import com.cg.domain.ProductDesc;
 import com.cg.domain.ProductMedia;
+import com.cg.domain.ProductMediaPath;
+import com.cg.domain.ProductSold;
 import com.cg.domain.ProductWish;
 import com.cg.domain.SchemeOffer;
 import com.cg.service.ServiceClass;
@@ -381,7 +386,7 @@ public class UserController {
 		String prod_id=(String) request.getSession().getAttribute("productId");
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		prod_id="P_21M_001";
+		/*prod_id="P_21M_001";*/
 		List<Product> list = sc.getSuggestedProducts(prod_id);
 		List<Media> path = sc.getMediaPath1(list);
 
@@ -413,7 +418,7 @@ public class UserController {
 		response.setContentType("text/html");
 		String rate = request.getParameter("rateString");
 		String feed=request.getParameter("feedString"); 
-System.out.println("here");
+
 		double rate1=0.0;
 		if(!rate.isEmpty()){
 			
@@ -423,7 +428,7 @@ System.out.println("here");
 
 			userid="Anonymous";
 		}
-		System.out.println(userid);
+		
 		sc.createFeedback(userid,pid,  feed, rate1 );
 		List<Feedback> flist= sc.getAll(pid);
 		out.print("<table>");
@@ -637,16 +642,149 @@ System.out.println("here");
 	
 	@RequestMapping(value="wishlist",method=RequestMethod.GET)
 	public String getAllWishList(ModelMap map){
-		List<ProductWish> wishlist=sc.getAllWishListPro(); 
-		System.out.println(wishlist.size());
-		List<MediaPath> mlist=sc.getImageList();
-		System.out.println(mlist.size());
-		map.put("wlist",wishlist);
-		map.put("mlist", mlist);
+		List<Product> wishlist=sc.getAllWishListPro(); 	
+		List<String> medialist=new ArrayList<String>();
+		List<ProductMediaPath> wlist=new ArrayList<ProductMediaPath>();
+		/**/
+		for(Product p:wishlist){
+			
+			String path=sc.getImageList(p.getProductId());
+			path="http://10.102.54.147:801"+path;
+			ProductMediaPath productimagelist= new ProductMediaPath(p,path);
+			
+			wlist.add(productimagelist);
+		}
+		map.put("wlist",wlist);
+		/*map.put("imagelist",medialist);*/
 		return "ViewWishList";
 	}
+/*TIM+Praveen*/
 
+	@RequestMapping(value = "addtocart",method = RequestMethod.GET)
+	public String addToCart(ModelMap map, HttpServletRequest request) throws ServletException, IOException{
+		HttpSession session = request.getSession();
+		String schemeId=request.getParameter("result");
+		session.setAttribute("schemeId",schemeId);
+		
+		List<ProductSold> items = sc.calculateProductDiscount(session,request); //Praveen FUNCTION to be called
+		sc.addCart(items, session);
+		map.addAttribute("list", items);
+		
+		return "SearchResults";
+	}	
 
+	@RequestMapping(value = "DisplayCart", method = RequestMethod.GET)
+	public String displayCart(HttpServletRequest request, ModelMap map) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		List<ProductSold> itemlist = (List<ProductSold>) session.getAttribute("itemlist");
+		double total = (double) session.getAttribute("total");
+		int qty = (int) session.getAttribute("qty");
+		
+		String pressdel = request.getParameter("del");
+		if (pressdel != null) {
+			int item_to_Delete = Integer.parseInt(pressdel);
+			sc.deleteCart(item_to_Delete, session);
+			double deltotal = (double) session.getAttribute("total");
+			int delqty = (int) session.getAttribute("qty");
+			map.addAttribute("total", deltotal);
+			map.addAttribute("qty", delqty);
+			map.addAttribute("itemlist", itemlist );
+			
+			return "DisplayCart";
+		}
+		
+		String checkout = request.getParameter("chkout");
+		if (checkout != null) {
+			
+			return "CheckOut";
+		}
+		
+		map.addAttribute("itemlist", itemlist);
+		map.addAttribute("total", total);
+		map.addAttribute("qty", qty);
+		
+		return "DisplayCart";
+	}
+	
+	@RequestMapping(value="calculateCartDiscount",method=RequestMethod.POST)
+	public String calculateCartDiscount(ModelMap map, @RequestParam("r1")String find, HttpServletRequest request){
+		
+		double total_cost=0;
+		HttpSession session = request.getSession();
+		List<ProductSold> itemlist = (List<ProductSold>) session.getAttribute("itemlist");
+  		ProductSold ps4=itemlist.get(0);
+		total_cost=sc.calculateCartByDiscount(itemlist, ps4.getUser_id(), find);
+		session.setAttribute("total", total_cost);
+		double total = (double) session.getAttribute("total");
+		int qty = (int) session.getAttribute("qty");
+		
+		map.addAttribute("itemlist", itemlist);
+		map.addAttribute("total", total);
+		map.addAttribute("qty", qty);
+		return "CheckOut";
+	}
+	@RequestMapping(value="/checkQty",method=RequestMethod.POST)
+	@ResponseBody
+	public String checkQty(@RequestParam(value="qty") String quantity,@RequestParam(value="result")String scheme,HttpServletRequest request){
+		HttpSession hs=request.getSession();
+		/*hs.setAttribute("productid","1");*/
+		String product=(String) hs.getAttribute("productId");
+		String result;
+		boolean b=sc.findQuantity(product,quantity,scheme);
+		if (b) {
+			result="true";
+		} else {
+			result="false";
+		}
+		
+		return result;
+	}
+	@RequestMapping(value="/checkQtywithnoscheme",method=RequestMethod.POST)
+	@ResponseBody
+	public String checkQtywithnoscheme(@RequestParam(value="qty") String quantity,HttpServletRequest request){
+		HttpSession hs=request.getSession();
+		/*hs.setAttribute("productid","1");*/
+		String product=(String) hs.getAttribute("productId");
+		String scheme="";
+		String result=null;
+		boolean b=sc.findQuantitywithnoscheme(product,quantity,scheme);
+		if (b) {
+			result="true";
+		} else {
+			result="false";
+		}
+		
+		return result;
+	}
 
+						/*Subhankar*/
+	@RequestMapping(value="customerreturn",method=RequestMethod.POST)
+	public String enterReturnedItems(ModelMap map,
+			@RequestParam("prodid") String prodid) {
+System.out.println("here al;se"+prodid);
+		sc.setReturnedItems(prodid);
+		sc.setReturnStatus(prodid);
+		String userId="C_1234";
+		List<CustomerDetails> l = sc.getOrderDetails(userId);
+		map.put("list", l);
+		return "UserTransactionDetails";
+	}
+	
+	@RequestMapping(value="view_detail")
+	public String getDetail(ModelMap map,@RequestParam("order_id") Long order_id ){
+	JoinOrdersTransaction getDetails=sc.getdetails(order_id);
+	   map.addAttribute("trans_history", getDetails);
+	return "OrderDetails";
+	}
+
+	@RequestMapping(value = "buyhistory", method = RequestMethod.GET)
+	public String findUser(ModelMap map) {
+		String userId="C_1234";
+		
+		List<CustomerDetails> l = sc.getOrderDetails(userId);
+		
+		map.put("list", l);
+		return "UserTransactionDetails";
+	}
 
 }

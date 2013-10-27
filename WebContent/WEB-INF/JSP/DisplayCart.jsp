@@ -119,10 +119,10 @@ th {
 	height: 180px;
 	width: 285px;
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: bold;
-	padding-top: 20px;
-	padding-left: 10px;
+	padding-top: 10px;
+	padding-left: 5px;
 }
 -->
 
@@ -182,14 +182,16 @@ var txt=${total};
 						</table>
 					</div>
 					</form>
-					<form action="DisplayCart" method="get" target="page" onsubmit="return functionCart();">
 					<div class="total" id = "total">
-						<a>Total : Rs[${total}]
-						</a><br /> <a style="font-size: 14px">Total Qty : [${qty}]
-						</a><br /> <input name="chkout" type="submit" value="Checkout"/>
-					</div>
+					<form id="calculateCartDiscount" action="calculateCartDiscount" target="page" method="post" onsubmit="return functionCart();">
+						<a>Total : $[${total}]</a>
+						<br /> <a style="font-size: 14px">Total Qty : [${qty}]</a>
+						<br><br>
+						<a style="font-size: 12px">Cart Discount<input type="radio" id="r1" name="r1" value="cart" checked="checked"/></a><br>
+						<a style="font-size: 12px">Reward point<input type="radio" id="r2" name="r1" value="rewards"/></a><br>
+						<input name="chkout" type="submit" value="Checkout"/>  
 					</form>
-				</div>
+					</div>
 			</div>
 			<div class="myfooter">
 				<h3 style="font-weight: normal; padding-left: 10px">&copy;CapStore</h3>

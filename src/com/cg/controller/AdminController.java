@@ -10,6 +10,7 @@ import java.util.List;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ import com.cg.domain.ProductDescription;
 import com.cg.domain.ProductRatings;
 import com.cg.domain.ProductShare;
 import com.cg.domain.ProductViews;
+import com.cg.domain.Returneditem;
 import com.cg.domain.RevenueTable;
 import com.cg.domain.WishlistCount;
 @Controller
@@ -257,7 +259,60 @@ public class AdminController {
 
 		return "ReportForAdmin";
 	}
+/*TAekwoNDO MAN*/
+	@RequestMapping(value = "adminapprove")
+	public String getApprove(ModelMap map,
+			@RequestParam("orderId") long orderId,
+			@RequestParam("transactionId") long transactionId,
+			@RequestParam("userId") String userId,
+			@RequestParam("productId") String productId,
+			@RequestParam("productCost") double productCost,
+			@RequestParam("productQuantity") int productQuantity,
+			@RequestParam("hidd") long returnstatusId) {
 
+		sc.setReturnApprove(returnstatusId,productId);
 
+		System.out.println("Controller--"+productId);
+		
+		List<Returneditem> l1 = sc.storeDetails();
+		map.put("list1", l1);
+		return "ReturnValidationByAdmin";
+
+	}
+
+	@RequestMapping(value = "adminreject")
+	public String getReject(ModelMap map,
+			@RequestParam("hidd1") int returnstatusId) {
+
+		sc.setReturnReject(returnstatusId);
+
+		List<Returneditem> l1 = sc.storeDetails();
+		map.put("list1", l1);
+		return "ReturnValidationByAdmin";
+
+	}
+	@RequestMapping(value = "adminreturn", method = RequestMethod.GET)
+	public String returnUser(ModelMap map) {
+
+		List<Returneditem> l1 = sc.storeDetails();
+		map.put("list1", l1);
+		return "ReturnValidationByAdmin";
+	}
+	/*Ravi Kiran*/
+	
+	
+	@RequestMapping(value="setpromomail",method=RequestMethod.GET) 
+	public String openSetEmailPage(){
+		return "SetEmailByAdmin";
+	}
+	
+	@RequestMapping(value="setmail",method=RequestMethod.POST) 
+	public String setmaildetails(@RequestParam("txt_startdate")String startdate,@RequestParam("txt_enddate")String enddate,@RequestParam("txt_duration")String duration,@RequestParam("txt_starttime")String starttime,@RequestParam("txt_endtime")String endtime) throws ParseException, InterruptedException, AddressException{
+		sc.setpromomail1(startdate, enddate, duration, starttime, endtime);
+		return "Admin";
+	}
+	
+	
+	
 
 }

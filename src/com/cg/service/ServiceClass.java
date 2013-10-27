@@ -4,12 +4,15 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -42,6 +45,7 @@ import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
+import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
@@ -53,7 +57,10 @@ import com.cg.domain.AdvertisementMedia;
 import com.cg.domain.Category;
 import com.cg.domain.CategoryCount;
 import com.cg.domain.Count;
+import com.cg.domain.CustomerDetails;
+import com.cg.domain.Email;
 import com.cg.domain.Feedback;
+import com.cg.domain.JoinOrdersTransaction;
 import com.cg.domain.MarketShare;
 import com.cg.domain.MarketShareRevenue;
 import com.cg.domain.Media;
@@ -70,12 +77,17 @@ import com.cg.domain.ProductMedia;
 import com.cg.domain.ProductMediaPath;
 import com.cg.domain.ProductRatings;
 import com.cg.domain.ProductShare;
+import com.cg.domain.ProductSold;
 import com.cg.domain.ProductViews;
 import com.cg.domain.ProductWish;
+import com.cg.domain.Returneditem;
+import com.cg.domain.Returnstatus;
 import com.cg.domain.RevenueTable;
+import com.cg.domain.Reward;
 import com.cg.domain.Scheme;
 import com.cg.domain.SchemeOffer;
 import com.cg.domain.Shipping;
+import com.cg.domain.Stockscheme;
 import com.cg.domain.Transaction;
 import com.cg.domain.User;
 import com.cg.domain.Viewcount;
@@ -515,7 +527,7 @@ public class ServiceClass {
 			s=u.getUserId();
 		}else if(u==null){
 			m=idaomerchant.findById(email_id);
-			System.out.println(m);
+			
 			if(m!=null){
 				s=m.getMerchantId();
 				merchantname=m.getMerchantName();
@@ -1611,7 +1623,7 @@ public class ServiceClass {
 	public List<ProductMedia> searchRelatedProduct(String brand) {
 		List<Media> li = idaomedia.findAll();
 		List<ProductMedia> finallist = new ArrayList<ProductMedia>();
-		System.out.println("total size"+li.size());
+		
 		for (Media m : li) {
 			if (brand.contains(m.getProduct().getProductBrand())) {
 				ProductMedia pm = new ProductMedia();
@@ -1701,7 +1713,7 @@ public class ServiceClass {
 	public List<Product> getSuggestedProducts(String product_id){
 		int i =0;
 
-
+ product_id="P_21M_0001";
 		Product product=idaoproduct.findOne(product_id);
 
 		String categoryid=product.getCategory().getCategoryId();
@@ -1894,23 +1906,23 @@ public class ServiceClass {
 				String test1 = "buyandget";
 
 				if (test.equalsIgnoreCase(test1)) {
-					System.out.println("dinesh here");
+					
 					String buy_id = s.getProduct().getProductId();
 					String get_id = s.getOffer().getSchemeName();
 					Offer offer = s.getOffer();
 					if (buy_id==get_id) {
-						System.out.println("dinesh here 2");
+						
 						if (idaoproduct.findOne(get_id).getProductStock()>=(Long.parseLong(offer.getValue())+1)) {
-							System.out.println(idaoproduct.findOne(get_id).getProductStock());
-							System.out.println(Long.parseLong(offer.getValue())+1);
+							
+							
 							so.setScheme(s);
 							so.setOffer(s.getOffer());
 							list_schemeoffer.add(so);
 						}
 					}else {
 						if (idaoproduct.findOne(get_id).getProductStock()>=(Long.parseLong(offer.getValue()))) {
-							System.out.println(idaoproduct.findOne(get_id).getProductStock());
-							System.out.println(Long.parseLong(offer.getValue())+1);
+							
+							
 							so.setScheme(s);
 							so.setOffer(s.getOffer());
 							list_schemeoffer.add(so);
@@ -1918,7 +1930,7 @@ public class ServiceClass {
 					}
 				}else {
 
-					System.out.println("dinesh here 3");
+					
 					so.setScheme(s);
 					so.setOffer(s.getOffer());
 					list_schemeoffer.add(so);
@@ -1961,7 +1973,7 @@ public class ServiceClass {
 		for (ProductMedia p : li1) {
 			fli1.add(p);
 		}
-		System.out.println(fli1);
+		
 		return fli1;
 
 	}
@@ -2009,6 +2021,7 @@ public class ServiceClass {
 
 	@Transactional
 	public String getCatgoryOfgivenProduct(String prod_id) {
+		
 		return idaoproduct.findOne(prod_id).getCategory().getCategoryId();
 	}
 
@@ -2056,17 +2069,7 @@ public class ServiceClass {
 	/*============================ghanshyam raut comparator class=========================*/
 
 
-	class MySalaryComp implements Comparator<ProductMedia>{
-		@Override
-		public int compare(ProductMedia e1, ProductMedia e2) {
-			if(e1.getP().getProductCost() < e2.getP().getProductCost()){
-				return 1;
-			} 
-			else {
-				return -1;
-			}
-		}
-	}
+	
 	@Transactional
 	public boolean chechList(String userid, String productid){
 		boolean c=true;
@@ -2109,9 +2112,9 @@ public class ServiceClass {
 	 return idaowishlist.findAll();
 	}
 	@Transactional
-	public List<MediaPath> getImageList() {
+	public String getImageList(String productId) {
 		// TODO Auto-generated method stub
-		return idaomedia.getByproductId();
+		return idaomedia.mediaReturn(productId);
 	}
 	@Transactional
 	public int deleteFromWishList(String proid) {
@@ -2129,6 +2132,433 @@ public class ServiceClass {
 		}
 		return i;
 	}
+	/*TIM+PRAVEEN*/
+	
+	
+	private double grandtotal;
+	private  List<ProductSold> cartitemlist = new ArrayList<ProductSold>();
+	private List<Integer> prodQty = new ArrayList<Integer>();
+	private List<Double> prodCost = new ArrayList<Double>();
+	
+	private List<ProductSold> crashRecoveredList= new ArrayList<ProductSold>();
+	
+	@Transactional
+	public List<ProductSold> calculateProductDiscount( HttpSession session, HttpServletRequest request){
+		
+		List<ProductSold> list_ps=new ArrayList<ProductSold>();
+
+		/*session.setAttribute("productid", "1");
+		session.setAttribute("userid", "1");*/
+		String product = (String) session.getAttribute("productId");
+		/*String user = (String) session.getAttribute("userid");*/
+		String user="C_1234";
+		int qty = Integer.parseInt(request.getParameter("qty"));
+		String scheme=(String)session.getAttribute("schemeId");
+		/*String scheme = request.getParameter("schemeId");*/
+		
+		Product p_new = idaoproduct.findOne(product);
+		ProductSold ps = new ProductSold();
+		String Product_id = product;
+		double actual_price = 0;
+		String scheme_id = scheme;
+		double price1 = p_new.getProductCost();
+		
+
+		if(scheme.equals("")){
+			
+			actual_price=qty*price1;
+			ps.setQty(qty);
+			ps.setActual_price(actual_price);
+		}
+		
+		else{
+		
+			Offer o=idaooffer.findScheme_id(Long.parseLong((scheme_id)));
+			Product p=idaoproduct.findProduct(o.getSchemeName());
+			long schemeid=Long.parseLong((scheme_id));
+			Stockscheme stock=idaooffer.findProductId(schemeid);
+			int value=Integer.parseInt(o.getValue());
+			
+			if(p!=null){
+				
+				if(p.getProductId().equalsIgnoreCase(Product_id)&&o.getType().equalsIgnoreCase("buyandget")){
+					
+					if(((value+1)*qty)<=stock.getStock()-1){
+						actual_price=price1*qty;
+						qty=qty+(value*qty);
+						
+						ps.setActual_price(actual_price);	
+						ps.setQty(qty);	
+						}else{
+							
+						}
+				}
+					else if((!(p.getProductId().equalsIgnoreCase(Product_id)))&&(o.getType().equalsIgnoreCase("buyandget"))) {
+					ProductSold ps2=new ProductSold();
+					ps2.setProduct_id(p.getProductId());
+					ps2.setPrice(p.getProductCost());
+					ps2.setActual_price(0);
+					ps2.setProduct_name(p.getProductName());
+					ps2.setQty(Integer.parseInt(o.getValue())*qty);
+					ps2.setScheme_id(scheme_id);
+					ps2.setUser_id(user);
+					ps.setActual_price(price1*qty);
+					ps.setQty(qty);
+					list_ps.add(ps2);
+					}
+				}
+			else{
+				actual_price=price1*value*0.01F;
+				actual_price=(price1-actual_price)*qty;
+				ps.setQty(qty);
+				ps.setActual_price(actual_price);
+			}
+		}
+		ps.setProduct_name(p_new.getProductName());
+		ps.setProduct_id(Product_id);
+		ps.setPrice(price1);
+		ps.setScheme_id(scheme_id);
+		ps.setUser_id(user);
+		list_ps.add(ps);
+		return list_ps;
+
+	}
+
+	
+	@Transactional
+	public void addCart(List<ProductSold> item, HttpSession session){
+		session.setAttribute("total", grandtotal);
+		session.setAttribute("itemlist", cartitemlist);
+
+		String userid ="C_1234"; /*(String) session.getAttribute("userId");*/
+		
+		cartitemlist.addAll(item);
+		for(ProductSold psitems:cartitemlist){
+			prodCost.add(psitems.getActual_price());
+			prodQty.add(psitems.getQty());
+		}
+
+		grandtotal = cartGrandTotal(session);
+		session.setAttribute("total", grandtotal);
+		session.setAttribute("itemlist", cartitemlist);
+
+		Map cartMap = new HashMap(); 
+		cartMap.put(userid, cartitemlist);
+		
+		session.setAttribute("cartMap", cartMap);
+		CartPersistence saveCart=new CartPersistence(userid, cartitemlist);   //Sathya Persistence
+		saveCart.start();
+		
+		CartDeserialize getCart = new CartDeserialize(userid);
+		crashRecoveredList = getCart.getItemsList();
+		
+	}
+
+	public double cartGrandTotal(HttpSession session){
+		grandtotal = 0;
+		int i=0, qty=0;
+		//double tot=0;
+		//for (i=0; i<prodCost.size() && i<prodQty.size(); i++) {	
+		//tot=prodCost.get(i)*prodQty.get(i);
+		//grandtotal = grandtotal + tot;		
+		//qty = qty + prodQty.get(i);
+		//}
+		
+		for (double tot: prodCost) {
+		     grandtotal = grandtotal + tot;
+		}
+		
+		for (int totqty: prodQty) {
+			 qty = qty + totqty;
+		}
+		
+		session.setAttribute("qty", qty);
+		prodCost.clear();
+		prodQty.clear();
+		return grandtotal;
+	}
+
+	public void deleteCart(int item_to_Delete, HttpSession session){
+		ProductSold delProdObj = cartitemlist.get(item_to_Delete);
+		double del_Item_Price = delProdObj.getActual_price();
+		int del_Item_Qty = delProdObj.getQty();
+		grandtotal = grandtotal - del_Item_Price;
+		cartitemlist.remove(delProdObj);
+		session.setAttribute("total", grandtotal);
+		int sessionQty = (int) session.getAttribute("qty");
+		int qty = sessionQty - del_Item_Qty;
+		session.setAttribute("qty", qty);		
+	}
+
+	//* Praveen Cart Discount
+	@Transactional
+	public double calculateCartByDiscount(List<ProductSold> ps,String userid,String find) {
+		double total_cost=0;
+		int count=0;
+		
+		Iterator<ProductSold> itr1=ps.listIterator();
+		while(itr1.hasNext()){
+			ProductSold ps1=itr1.next();
+			total_cost=total_cost+ps1.getActual_price();
+		}
+		Iterator<ProductSold> itr=ps.listIterator();
+		while(itr.hasNext()){
+			ProductSold ps1=itr.next();
+			
+			if(ps1.getScheme_id().equalsIgnoreCase("")||ps1.getScheme_id().equalsIgnoreCase("null")){
+				count=0;	
+			}
+			else{
+				count++;
+				break;
+			}
+		}
+	
+		String carttype="cart";
+		List<Offer> o_list=idaooffer.findCartScheme(carttype);
+	
+		Double[] s_list=new Double[10];
+		int i_new=0;
+		Iterator<Offer> itro_new=o_list.listIterator();
+		while(itro_new.hasNext()){
+			Offer o=itro_new.next();
+			s_list[i_new]=Double.parseDouble(o.getSchemeName());
+			
+			i_new++;
+		}
+		Double[] s_list1=new Double[i_new];
+		for(int i=0;i<i_new;i++){
+			s_list1[i]=s_list[i];
+		}
+		Arrays.sort(s_list1);
+		double temp=0;
+	for (double d : s_list1) {
+		if(total_cost>d){
+			temp=d;
+		}
+	}
+	int y=(int)temp;
+	
+	String schemename=String.valueOf(y);
+	
+		Offer O_final=idaooffer.findBySchemeName(schemename);
+	
+		
+		if(find.equalsIgnoreCase("cart") && O_final!=null){
+			if(count==0){
+				
+				float cart_discount=Float.parseFloat(O_final.getValue());
+				total_cost=total_cost-(total_cost*cart_discount*0.01F);
+				
+			}
+			else{
+				total_cost=total_cost;
+						
+			}
+    		}
+    		else if(find.equalsIgnoreCase("rewards")){
+    			if(count==0){
+    				Reward reward=idaoreward.getReward(userid);
+    				long reward_points=reward.getRewardPoints();
+    				total_cost=total_cost-reward_points;
+    				}
+    				else{
+    					total_cost=total_cost;
+    				}
+    		}
+    		else{
+    			total_cost=total_cost;
+    		}
+		
+		return total_cost;
+		}
+	public boolean findQuantity(String product,String qty,String scheme) {
+		boolean b=false;
+		long quantity=Long.parseLong(qty);
+		Product p1=idaoproduct.findOne(product);
+		if(scheme.equals("")){
+			if(quantity<=p1.getProductStock()){
+				b=true;
+			}
+			else{
+				b=false;
+			}
+		}
+		Offer o=idaooffer.findScheme_id(Long.parseLong(scheme));
+		
+		
+		int value=Integer.parseInt(o.getValue());
+		if(o.getType().equalsIgnoreCase("product")){
+			if(quantity<=p1.getProductStock()){
+				b=true;
+			}
+			else{
+				b=false;
+			}
+		}
+		else if(o.getType().equalsIgnoreCase("buyandget")){
+			Product p2=idaoproduct.findOne(o.getSchemeName());
+			
+			if(p2.getProductId().equalsIgnoreCase(product)){
+				if(((value+1)*quantity)<=p2.getProductStock()){
+						b=true;
+					}else{
+						b=false;
+					}
+			}
+			else{
+				if((value*quantity)<=p2.getProductStock()&&(value*quantity)<=p1.getProductStock()){
+					b=true;
+				}else{
+					b=false;
+				}
+			}
+			
+		}
+		
+		return b;
+	}
+	public boolean findQuantitywithnoscheme(String product, String qty,String scheme) {
+		boolean b=false;
+		long quantity=Long.parseLong(qty);
+		Product p1=idaoproduct.findOne(product);
+		if(scheme.equals("")){
+			if(quantity<=p1.getProductStock()){
+				b=true;
+			}
+			else{
+				b=false;
+			}
+		}
+		return b;
+	}
+	/*subhankar*/
+	@Transactional
+	public List<Returneditem> storeDetails() {
+
+		List<Returneditem> ret_list = idaoreturneditem.findAll();
+
+		return ret_list;
+
+	}
+
+	@Transactional
+	public void setReturnedItems(String prodid) {
+		System.out.println("here"+prodid);
+
+		Returneditem rti = new Returneditem();
+		String[] s = prodid.split(",");
+		rti.setOrderId(Long.parseLong(s[0]));
+		rti.setUserId(s[1]);
+		rti.setProductId(s[2]);
+		rti.setProductName(s[3]);
+		rti.setProductCost(Double.parseDouble(s[4]));
+		rti.setTransactionId(Long.parseLong(s[5]));
+		rti.setProductQuantity(Long.parseLong(s[6]));
+		rti.setReturnStatus("Pending");
+		rti.setReturnstatusId(Long.parseLong(s[8]));
+		idaoreturneditem.saveAndFlush(rti);
+
+	}
+
+	@Transactional
+	public void setReturnStatus(String prodid) {
+
+		String[] s = prodid.split(",");
+
+		Returnstatus o =idaoreturnstatus.findById(Long.parseLong(s[8]));
+
+		List<Returnstatus> oList = idaoreturnstatus.findAll();
+		for (Returnstatus ot : oList) {
+			if (ot.getReturnStatus() == o.getReturnStatus()) {
+				ot.setReturnStatus("Pending");
+				idaoreturnstatus.save(ot);
+				break;
+			}
+		}
+
+	}
+
+	@Transactional
+	public void setReturnApprove(long returnstatusId,String productId) {
+
+		System.out.println("Service--"+productId);
+		
+		idaoproduct.updateInventory(productId);
+
+		idaoreturneditem.setReturnedApprove(returnstatusId);
+
+		idaoreturnstatus.setRStatusApprove(returnstatusId);
+		
+
+	}
+
+	@Transactional
+	public void setReturnReject(long returnstatusId) {
+
+		idaoreturneditem.setReturnedReject(returnstatusId);
+
+		idaoreturnstatus.setRStatusReject(returnstatusId);
+
+	}
+	
+	@Transactional
+	public JoinOrdersTransaction getdetails(long order_id) {
+		// TODO Auto-generated method stub
+		JoinOrdersTransaction jot=new JoinOrdersTransaction();
+		  Order order_detail=idaoorder.findByOrderId(order_id);
+		    jot.setOrders(order_detail);
+		   List<Shipping> ship=idaoshipping.findByOrder_id(order_id);
+		   List<Transaction> order_desc=idaotransaction.findByOrder_id(order_id);
+		 		   jot.setTransactions(order_desc);
+		  
+		   jot.setShipping(ship);
+		   
+		return jot;
+	}
+
+	
+	@Transactional
+	public List<CustomerDetails> getOrderDetails(String userId) {
+		System.out.println("here details");
+		System.out.println(idaotransaction.getCustomerDetails(userId));
+		return idaotransaction.getCustomerDetails(userId);
+	
+	}
+	
+	/*Ravi Kiran*/
+	
+
+	@Transactional
+	public List<Email> allemaildetails(){
+		List<Email> emails=new ArrayList<Email>();
+		emails=idaouser.getEmails();
+		return emails;
+	}
+	public void setpromomail1(String startdate, String enddate, String duration, String starttime,String endtime) throws ParseException, InterruptedException, AddressException{
+		List<Email> emails=new ArrayList<Email>();
+		List<String> ls=new ArrayList<String>();
+		emails=idaouser.getEmails();
+		for(Email e:emails){
+			String s=e.getUserEmail().toString();
+			ls.add(s);
+		}
+		InternetAddress[] toAddress = new InternetAddress[ls.size()];
+		for(int i=0;i<ls.size();i++){
+			toAddress[i]=new InternetAddress(ls.get(i));
+		}
+		SetMail sm=new SetMail(toAddress);
+		sm.setpromomail(toAddress,startdate, enddate, duration, starttime, endtime);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 class PasswordAuthenticator extends Authenticator {
 	String user;
@@ -2142,6 +2572,17 @@ class PasswordAuthenticator extends Authenticator {
 	public PasswordAuthentication getPasswordAuthentication()
 	{
 		return new PasswordAuthentication(user, pw);
+	}
+}
+class MySalaryComp implements Comparator<ProductMedia>{
+	@Override
+	public int compare(ProductMedia e1, ProductMedia e2) {
+		if(e1.getP().getProductCost() < e2.getP().getProductCost()){
+			return 1;
+		} 
+		else {
+			return -1;
+		}
 	}
 }
 

@@ -32,7 +32,7 @@ public interface IDaoMedia extends JpaRepository<Media,Long>{
 	@Query("select  m from Media m")
 	List<Media> getInitialBrands();
 	@Transactional
-	@Query("select new com.cg.domain.MediaPath(m.mediaPath) from Wishlist w ,Media m where w.productId=m.product.productId")
+	@Query("select new com.cg.domain.MediaPath(m.mediaPath) from Wishlist w ,Media m where w.product.productId=m.product.productId")
 	public List<MediaPath> getByproductId();
 
 }

@@ -75,21 +75,21 @@ public class MerchantController {
 	@RequestMapping(value="deleteproductbymerchant",method=RequestMethod.GET)
 
 	public String merchantdel(ModelMap map,HttpServletRequest request){
-		List<Transaction> list =sc.getOrder((String) request.getSession().getAttribute("userid"));
+		List<Transaction> list =sc.getOrder((String) request.getSession().getAttribute("merchantid"));
 		map.put("list",list);
 		return "DeleteProductsByMerchant";
 	}
 
 	@RequestMapping(value="reduceproductbymerchant",method=RequestMethod.GET)
 	public String reduceInventory(ModelMap map,HttpServletRequest request){
-		List<Transaction> list =sc.getOrder((String) request.getSession().getAttribute("userid"));
+		List<Transaction> list =sc.getOrder((String) request.getSession().getAttribute("merchantid"));
 		sc.deleteProduct1(list);
 		return "UpdateSuccessByMerchant";
 	}
 
 	@RequestMapping(value="showproductsformerchant",method=RequestMethod.GET)
 	public String showproductofmerchant(ModelMap map,HttpServletRequest request){
-		List<Product> list=sc.getAllProductofMerchant((String) request.getSession().getAttribute("userid"));
+		List<Product> list=sc.getAllProductofMerchant((String) request.getSession().getAttribute("merchantid"));
 		map.put("list",list);
 		return "ShowProductsForMerchant";
 	}
@@ -117,7 +117,7 @@ public class MerchantController {
 	@RequestMapping(value="checkorders",method=RequestMethod.GET)
 	public String checkorder(ModelMap map,HttpServletRequest request){
 
-		List<Transaction> list =sc.getOrder((String) request.getSession().getAttribute("userid"));
+		List<Transaction> list =sc.getOrder((String) request.getSession().getAttribute("merchantid"));
 		map.put("list",list);
 
 		return "CheckOrdersByMerchant";

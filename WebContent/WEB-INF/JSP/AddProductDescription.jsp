@@ -82,7 +82,9 @@
 			<li><a href="getRemovedOrRejectedMerchants">Denied Merchants</a></li>
 			<li><a href="inviteAMerchant">Invite Merchant</a></li>
 			<li><a href="createOfferAdmin">Create Offers</a></li>
+			<li><a href="adminreturn">Validate Returns</a></li>
 			<li><a href="reports">Reports</a></li>
+			<li><a href="setpromomail">Schedule Emails</a></li>
 		</ul>
 	</div>
 	<!--navside-bar ends here  -->

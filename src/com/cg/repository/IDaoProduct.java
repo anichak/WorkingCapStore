@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,4 +45,18 @@ public interface IDaoProduct extends JpaRepository<Product,String>{
 	@Transactional
 	@Query("select p from Product p,Wishlist w where p.productId=w.product.productId and w.wishEnddate=?1")
 	public List<Product> getByproductId(Date d);
+	/*Praveen*/
+	@Transactional
+	@Query("select p from Product p where p.productId=(:x1)")
+	Product findProduct(@Param("x1") String schemeName);
+	
+	@Transactional
+	@Query("select p from Product p where p.productId=?1")
+	Product findOne(String product);
+	@Transactional
+	 @Modifying
+	 @Query("update Product p set p.productStock=p.productStock+1 where p.productId = ?1")
+	 public void updateInventory(String productId);
+	
+	
 }

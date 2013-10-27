@@ -30,7 +30,7 @@
 		<property name="jpaPropertyMap">
 			<map>
 				<entry key="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"></entry>
-				<entry key="show_sql" value="true"></entry>
+				<entry key="show_sql" value="false"></entry>
 				<entry key="hibernate.hbm2ddl.auto" value="update"></entry>
 			</map>
 		</property>
@@ -61,7 +61,7 @@
 <jpa:repositories base-package="com.cg.repository" query-lookup-strategy="create-if-not-found"></jpa:repositories>
 	<bean id="jpavendoradaptor"
 		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-		<property name="showSql" value="true"></property>
+		<property name="showSql" value="false"></property>
 	</bean>
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory"></property>

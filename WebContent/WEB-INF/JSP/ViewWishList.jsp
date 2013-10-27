@@ -103,7 +103,7 @@
 	<div class="middle-container">
 
 
-		<form method="post" action="addcart">
+		
 			<table cellpadding="10" cellspacing="0" border="" class="display"
 				id="example" style="font-size: 12px; font-weight: bold">
 				<thead>
@@ -114,19 +114,22 @@
 				</thead>
 				<tbody>
 					<c:forEach items="${wlist}" var="id">
-						<c:forEach items="${mlist}" var="mid">
 							<tr>
-								<td><c:out value="${id.productName}"></c:out>
-									<td><c:out value="${id.productBrand}"></c:out>
-										<td><img alt="<c:out value="${mid.mediaPath}"></c:out>"
-											src="i"> <input type="submit" value="go to product"
-												id="viewproduct" name="viewproduct"></td>
+							<form method="get" action="prod">
+								<td><c:out value="${id.product.productName}"></c:out>
+									<td><c:out value="${id.product.productBrand}"></c:out>
+									<td><img alt="<c:out value="${id.productmediapath}"></c:out>" src="${id.productmediapath}">
+											 <input type="submit" value="go to product"
+												id="viewproduct" name="viewproduct">
+												<input type="hidden" value="${id.product.productId}" id="prod_id" name="prod_id">
+												</td>
+							</form>
 							</tr>
-						</c:forEach>
+						
 					</c:forEach>
 				</tbody>
 			</table>
-		</form>
+		
 	</div>
 
 

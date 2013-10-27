@@ -93,6 +93,9 @@ onfocus="hideText();" value="" placeholder="       Search Here" >
 	<form name="wish" action="wishlist">
 <input type="submit" class="headerbuttons" value="WishList"></input>
   </form>
+  <form action="buyhistory" name="Order History">
+  <input type="submit" class="headerbuttons" value="Order History"></input>
+  </form>
        <div class="container">
     <div id="slides">
      <c:forEach items="${list2}" var="id">
