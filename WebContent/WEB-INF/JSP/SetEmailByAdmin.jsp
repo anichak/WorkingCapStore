@@ -6,7 +6,8 @@
 <title>Untitled Document</title>
 <link type="text/css" href="CAPSTORE/WebContent/WEB-INF/resources/Css/login.css" rel="stylesheet"  />
 <link type="text/css" href="CAPSTORE/WebContent/WEB-INF/resources/Css/style.css" rel="stylesheet"  />
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+<script src="resources/Script/jquery-2.0.3.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
  <script>
   $(function() {

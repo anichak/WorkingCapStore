@@ -1,0 +1,1789 @@
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdminLogin
+Sun Oct 27 21:09:00 IST 2013:       To be executing:     showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:00 IST 2013:       Excecuted:           showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:09:00 IST 2013:       Returning:           Admin_Login
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:09:00 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:09:00 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:09:00 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:00 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:00 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:09:00 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:00 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:09:00 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdmin
+Sun Oct 27 21:09:06 IST 2013:       To be executing:     showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:06 IST 2013:       Excecuted:           showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:09:06 IST 2013:       Returning:           Admin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:09:08 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:09:08 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:09:08 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:08 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:08 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:09:08 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:08 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:09:08 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    openSetEmailPage
+Sun Oct 27 21:09:10 IST 2013:       To be executing:     openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:09:10 IST 2013:       Excecuted:           openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:09:10 IST 2013:       Returning:           SetEmailByAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setmaildetails
+Sun Oct 27 21:10:29 IST 2013:       To be executing:     setmaildetails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setpromomail1
+Sun Oct 27 21:10:29 IST 2013:       To be executing:     setpromomail1
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getEmails
+Sun Oct 27 21:10:29 IST 2013:       To be executing:     getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:10:29 IST 2013:       Excecuted:           getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:10:29 IST 2013:       Returning:           [null, avitintin@gmail.com, badireddy.aditya@capgemini.com, anand.t@capgemini.com, avijit.roy@capgemini.com]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:10:29 IST 2013:       Excecuted:           setpromomail1
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:10:29 IST 2013:       Method               setpromomail1         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:10:29 IST 2013:       Excecuted:           setmaildetails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:10:29 IST 2013:       Method               setmaildetails         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdminLogin
+Sun Oct 27 21:12:01 IST 2013:       To be executing:     showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:01 IST 2013:       Excecuted:           showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:12:01 IST 2013:       Returning:           Admin_Login
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:12:01 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:12:01 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:12:01 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:01 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:01 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:12:01 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:01 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:12:01 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdmin
+Sun Oct 27 21:12:08 IST 2013:       To be executing:     showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:08 IST 2013:       Excecuted:           showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:12:08 IST 2013:       Returning:           Admin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:12:08 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:12:08 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:12:08 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:08 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:08 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:12:08 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:08 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:12:08 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    openSetEmailPage
+Sun Oct 27 21:12:10 IST 2013:       To be executing:     openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:10 IST 2013:       Excecuted:           openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:12:10 IST 2013:       Returning:           SetEmailByAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setmaildetails
+Sun Oct 27 21:12:30 IST 2013:       To be executing:     setmaildetails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setpromomail1
+Sun Oct 27 21:12:30 IST 2013:       To be executing:     setpromomail1
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getEmails
+Sun Oct 27 21:12:30 IST 2013:       To be executing:     getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:12:30 IST 2013:       Excecuted:           getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:12:30 IST 2013:       Returning:           [b.v.aditya1729@gmail.com, avitintin@gmail.com, badireddy.aditya@capgemini.com, anand.t@capgemini.com, avijit.roy@capgemini.com]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findUser
+Sun Oct 27 21:13:35 IST 2013:       To be executing:     findUser
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllProduct
+Sun Oct 27 21:13:35 IST 2013:       To be executing:     getAllProduct
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:13:35 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:13:35 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:13:35 IST 2013:       Returning:           [Product [productId=P_01M_0001], Product [productId=P_02M_0001], Product [productId=P_03M_0001], Product [productId=P_04M_0001], Product [productId=P_05M_0001], Product [productId=P_06M_0001], Product [productId=P_07M_0001], Product [productId=P_08M_0001], Product [productId=P_09M_0001], Product [productId=P_10M_0001], Product [productId=P_11M_0002], Product [productId=P_12M_0002], Product [productId=P_13M_0002], Product [productId=P_14M_0002], Product [productId=P_15M_0002], Product [productId=P_16M_0002], Product [productId=P_17M_0002], Product [productId=P_18M_0002], Product [productId=P_19M_0002], Product [productId=P_20M_0002], Product [productId=P_21M_0005], Product [productId=P_21M_001], Product [productId=P_22M_0005], Product [productId=P_22M_001], Product [productId=P_23M_0005], Product [productId=P_23M_001], Product [productId=P_24M_0005], Product [productId=P_24M_001], Product [productId=P_25M_0005], Product [productId=P_25M_001], Product [productId=P_26M_0005], Product [productId=P_27M_0005], Product [productId=P_28M_0005], Product [productId=P_29M_0005], Product [productId=P_30M_0005], Product [productId=p_31M_0003], Product [productId=P_31M_001], Product [productId=p_32M_0003], Product [productId=P_32M_001], Product [productId=p_33M_0003], Product [productId=P_33M_001], Product [productId=p_34M_0003], Product [productId=P_34M_001], Product [productId=p_35M_0003], Product [productId=P_35M_001], Product [productId=P_36M_0003], Product [productId=P_37M_0003], Product [productId=P_38M_0003], Product [productId=P_39M_0003], Product [productId=P_40M_0003], Product [productId=P_41M_0004], Product [productId=P_41M_001], Product [productId=P_42M_0004], Product [productId=P_42M_001], Product [productId=P_43M_0004], Product [productId=P_43M_001], Product [productId=P_44M_0004], Product [productId=P_44M_001], Product [productId=P_45M_0004], Product [productId=P_45M_001], Product [productId=P_46M_0004], Product [productId=P_47M_0004], Product [productId=P_48M_0004], Product [productId=P_49M_0004], Product [productId=P_50M_0004], Product [productId=P_51M_001], Product [productId=P_52M_001], Product [productId=P_53M_001], Product [productId=P_54M_001], Product [productId=P_55M_001]]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:13:35 IST 2013:       Excecuted:           getAllProduct
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:13:35 IST 2013:       Returning:           [Product [productId=P_01M_0001], Product [productId=P_02M_0001], Product [productId=P_03M_0001], Product [productId=P_04M_0001], Product [productId=P_05M_0001], Product [productId=P_06M_0001], Product [productId=P_07M_0001], Product [productId=P_08M_0001], Product [productId=P_09M_0001], Product [productId=P_10M_0001], Product [productId=P_11M_0002], Product [productId=P_12M_0002], Product [productId=P_13M_0002], Product [productId=P_14M_0002], Product [productId=P_15M_0002], Product [productId=P_16M_0002], Product [productId=P_17M_0002], Product [productId=P_18M_0002], Product [productId=P_19M_0002], Product [productId=P_20M_0002], Product [productId=P_21M_0005], Product [productId=P_21M_001], Product [productId=P_22M_0005], Product [productId=P_22M_001], Product [productId=P_23M_0005], Product [productId=P_23M_001], Product [productId=P_24M_0005], Product [productId=P_24M_001], Product [productId=P_25M_0005], Product [productId=P_25M_001], Product [productId=P_26M_0005], Product [productId=P_27M_0005], Product [productId=P_28M_0005], Product [productId=P_29M_0005], Product [productId=P_30M_0005], Product [productId=p_31M_0003], Product [productId=P_31M_001], Product [productId=p_32M_0003], Product [productId=P_32M_001], Product [productId=p_33M_0003], Product [productId=P_33M_001], Product [productId=p_34M_0003], Product [productId=P_34M_001], Product [productId=p_35M_0003], Product [productId=P_35M_001], Product [productId=P_36M_0003], Product [productId=P_37M_0003], Product [productId=P_38M_0003], Product [productId=P_39M_0003], Product [productId=P_40M_0003], Product [productId=P_41M_0004], Product [productId=P_41M_001], Product [productId=P_42M_0004], Product [productId=P_42M_001], Product [productId=P_43M_0004], Product [productId=P_43M_001], Product [productId=P_44M_0004], Product [productId=P_44M_001], Product [productId=P_45M_0004], Product [productId=P_45M_001], Product [productId=P_46M_0004], Product [productId=P_47M_0004], Product [productId=P_48M_0004], Product [productId=P_49M_0004], Product [productId=P_50M_0004], Product [productId=P_51M_001], Product [productId=P_52M_001], Product [productId=P_53M_001], Product [productId=P_54M_001], Product [productId=P_55M_001]]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:13:35 IST 2013:       Excecuted:           findUser
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:13:35 IST 2013:       Returning:           ShowInventoryForAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:13:37 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:13:37 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:13:37 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:13:37 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:13:37 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:13:37 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:13:37 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:13:37 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    del
+Sun Oct 27 21:14:17 IST 2013:       To be executing:     del
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllProduct
+Sun Oct 27 21:14:17 IST 2013:       To be executing:     getAllProduct
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:14:17 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:17 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:17 IST 2013:       Returning:           [Product [productId=P_01M_0001], Product [productId=P_02M_0001], Product [productId=P_03M_0001], Product [productId=P_04M_0001], Product [productId=P_05M_0001], Product [productId=P_06M_0001], Product [productId=P_07M_0001], Product [productId=P_08M_0001], Product [productId=P_09M_0001], Product [productId=P_10M_0001], Product [productId=P_11M_0002], Product [productId=P_12M_0002], Product [productId=P_13M_0002], Product [productId=P_14M_0002], Product [productId=P_15M_0002], Product [productId=P_16M_0002], Product [productId=P_17M_0002], Product [productId=P_18M_0002], Product [productId=P_19M_0002], Product [productId=P_20M_0002], Product [productId=P_21M_0005], Product [productId=P_21M_001], Product [productId=P_22M_0005], Product [productId=P_22M_001], Product [productId=P_23M_0005], Product [productId=P_23M_001], Product [productId=P_24M_0005], Product [productId=P_24M_001], Product [productId=P_25M_0005], Product [productId=P_25M_001], Product [productId=P_26M_0005], Product [productId=P_27M_0005], Product [productId=P_28M_0005], Product [productId=P_29M_0005], Product [productId=P_30M_0005], Product [productId=p_31M_0003], Product [productId=P_31M_001], Product [productId=p_32M_0003], Product [productId=P_32M_001], Product [productId=p_33M_0003], Product [productId=P_33M_001], Product [productId=p_34M_0003], Product [productId=P_34M_001], Product [productId=p_35M_0003], Product [productId=P_35M_001], Product [productId=P_36M_0003], Product [productId=P_37M_0003], Product [productId=P_38M_0003], Product [productId=P_39M_0003], Product [productId=P_40M_0003], Product [productId=P_41M_0004], Product [productId=P_41M_001], Product [productId=P_42M_0004], Product [productId=P_42M_001], Product [productId=P_43M_0004], Product [productId=P_43M_001], Product [productId=P_44M_0004], Product [productId=P_44M_001], Product [productId=P_45M_0004], Product [productId=P_45M_001], Product [productId=P_46M_0004], Product [productId=P_47M_0004], Product [productId=P_48M_0004], Product [productId=P_49M_0004], Product [productId=P_50M_0004], Product [productId=P_51M_001], Product [productId=P_52M_001], Product [productId=P_53M_001], Product [productId=P_54M_001], Product [productId=P_55M_001]]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:17 IST 2013:       Excecuted:           getAllProduct
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:17 IST 2013:       Returning:           [Product [productId=P_01M_0001], Product [productId=P_02M_0001], Product [productId=P_03M_0001], Product [productId=P_04M_0001], Product [productId=P_05M_0001], Product [productId=P_06M_0001], Product [productId=P_07M_0001], Product [productId=P_08M_0001], Product [productId=P_09M_0001], Product [productId=P_10M_0001], Product [productId=P_11M_0002], Product [productId=P_12M_0002], Product [productId=P_13M_0002], Product [productId=P_14M_0002], Product [productId=P_15M_0002], Product [productId=P_16M_0002], Product [productId=P_17M_0002], Product [productId=P_18M_0002], Product [productId=P_19M_0002], Product [productId=P_20M_0002], Product [productId=P_21M_0005], Product [productId=P_21M_001], Product [productId=P_22M_0005], Product [productId=P_22M_001], Product [productId=P_23M_0005], Product [productId=P_23M_001], Product [productId=P_24M_0005], Product [productId=P_24M_001], Product [productId=P_25M_0005], Product [productId=P_25M_001], Product [productId=P_26M_0005], Product [productId=P_27M_0005], Product [productId=P_28M_0005], Product [productId=P_29M_0005], Product [productId=P_30M_0005], Product [productId=p_31M_0003], Product [productId=P_31M_001], Product [productId=p_32M_0003], Product [productId=P_32M_001], Product [productId=p_33M_0003], Product [productId=P_33M_001], Product [productId=p_34M_0003], Product [productId=P_34M_001], Product [productId=p_35M_0003], Product [productId=P_35M_001], Product [productId=P_36M_0003], Product [productId=P_37M_0003], Product [productId=P_38M_0003], Product [productId=P_39M_0003], Product [productId=P_40M_0003], Product [productId=P_41M_0004], Product [productId=P_41M_001], Product [productId=P_42M_0004], Product [productId=P_42M_001], Product [productId=P_43M_0004], Product [productId=P_43M_001], Product [productId=P_44M_0004], Product [productId=P_44M_001], Product [productId=P_45M_0004], Product [productId=P_45M_001], Product [productId=P_46M_0004], Product [productId=P_47M_0004], Product [productId=P_48M_0004], Product [productId=P_49M_0004], Product [productId=P_50M_0004], Product [productId=P_51M_001], Product [productId=P_52M_001], Product [productId=P_53M_001], Product [productId=P_54M_001], Product [productId=P_55M_001]]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:17 IST 2013:       Excecuted:           del
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:17 IST 2013:       Returning:           UpdateInventoryByAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:14:17 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:14:17 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:14:17 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:17 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:17 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:17 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:17 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:17 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllMerchants
+Sun Oct 27 21:14:20 IST 2013:       To be executing:     getAllMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllMerchants
+Sun Oct 27 21:14:20 IST 2013:       To be executing:     getAllMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:14:20 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:20 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:20 IST 2013:       Returning:           [com.cg.domain.Merchant@78471b, com.cg.domain.Merchant@847332, com.cg.domain.Merchant@1a6f080, com.cg.domain.Merchant@f78840, com.cg.domain.Merchant@11232a8, com.cg.domain.Merchant@1bbe24e]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:20 IST 2013:       Excecuted:           getAllMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:20 IST 2013:       Returning:           [com.cg.domain.Merchant@78471b, com.cg.domain.Merchant@847332, com.cg.domain.Merchant@1a6f080, com.cg.domain.Merchant@f78840, com.cg.domain.Merchant@11232a8, com.cg.domain.Merchant@1bbe24e]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:20 IST 2013:       Excecuted:           getAllMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:20 IST 2013:       Returning:           AllMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:14:20 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:14:20 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:14:20 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:20 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:20 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:20 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:20 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:20 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getPendingMerchants
+Sun Oct 27 21:14:23 IST 2013:       To be executing:     getPendingMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getPendingMerchants
+Sun Oct 27 21:14:23 IST 2013:       To be executing:     getPendingMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:14:23 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:23 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:23 IST 2013:       Returning:           [com.cg.domain.Merchant@141593f, com.cg.domain.Merchant@14a3bd8, com.cg.domain.Merchant@9ef2fb, com.cg.domain.Merchant@1624543, com.cg.domain.Merchant@b14c0f, com.cg.domain.Merchant@1f8aab0]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:23 IST 2013:       Excecuted:           getPendingMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:23 IST 2013:       Method               getPendingMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:23 IST 2013:       Excecuted:           getPendingMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:23 IST 2013:       Method               getPendingMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getApprovedMerchants
+Sun Oct 27 21:14:33 IST 2013:       To be executing:     getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getApprovedMerchants
+Sun Oct 27 21:14:33 IST 2013:       To be executing:     getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:14:33 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:33 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:33 IST 2013:       Returning:           [com.cg.domain.Merchant@1f6a967, com.cg.domain.Merchant@ebb788, com.cg.domain.Merchant@15e7267, com.cg.domain.Merchant@69d7b0, com.cg.domain.Merchant@cf767d, com.cg.domain.Merchant@6c195f]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:33 IST 2013:       Excecuted:           getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:33 IST 2013:       Method               getApprovedMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:33 IST 2013:       Excecuted:           getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:33 IST 2013:       Method               getApprovedMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getOtherMerchants
+Sun Oct 27 21:14:52 IST 2013:       To be executing:     getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getOtherMerchants
+Sun Oct 27 21:14:52 IST 2013:       To be executing:     getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:14:52 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:52 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:52 IST 2013:       Returning:           [com.cg.domain.Merchant@1012b7a, com.cg.domain.Merchant@1cd6b9e, com.cg.domain.Merchant@154581f, com.cg.domain.Merchant@658a10, com.cg.domain.Merchant@4b6144, com.cg.domain.Merchant@ded648]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:52 IST 2013:       Excecuted:           getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:52 IST 2013:       Method               getOtherMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:52 IST 2013:       Excecuted:           getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:52 IST 2013:       Method               getOtherMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    inviteMerchants
+Sun Oct 27 21:14:56 IST 2013:       To be executing:     inviteMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:56 IST 2013:       Excecuted:           inviteMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:56 IST 2013:       Returning:           InvitationToMerchant
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:14:56 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:14:56 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:14:56 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:56 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:56 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:56 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:56 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:14:56 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    returnUser
+Sun Oct 27 21:14:58 IST 2013:       To be executing:     returnUser
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    storeDetails
+Sun Oct 27 21:14:58 IST 2013:       To be executing:     storeDetails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:14:58 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:58 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:58 IST 2013:       Returning:           [com.cg.domain.Returneditem@1fa0e79]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:58 IST 2013:       Excecuted:           storeDetails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:58 IST 2013:       Returning:           [com.cg.domain.Returneditem@1fa0e79]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:14:58 IST 2013:       Excecuted:           returnUser
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:14:58 IST 2013:       Returning:           ReturnValidationByAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    createOffer
+Sun Oct 27 21:15:06 IST 2013:       To be executing:     createOffer
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:06 IST 2013:       Excecuted:           createOffer
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:06 IST 2013:       Returning:           CreateOfferByAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllWishlist
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllWishlist
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchWishlist
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchWishlist
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllWishlist
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllWishlist
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllWishlist
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Wishlist@106524c, com.cg.domain.Wishlist@52e5e]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchWishlist
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.WishlistCount@1c53683, com.cg.domain.WishlistCount@7ddfac]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchViewcount
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchViewcount
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllViewcount
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllViewcount
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllViewcount
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Viewcount@1e44505, com.cg.domain.Viewcount@16f4c3b, com.cg.domain.Viewcount@1f5ced8, com.cg.domain.Viewcount@dec7e9, com.cg.domain.Viewcount@16ab0f, com.cg.domain.Viewcount@38a04d, com.cg.domain.Viewcount@1a436f0, com.cg.domain.Viewcount@12ca7b, com.cg.domain.Viewcount@1ab68de]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchViewcount
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.ProductViews@22e7b3, com.cg.domain.ProductViews@199ce2e, com.cg.domain.ProductViews@af54c8, com.cg.domain.ProductViews@e74708, com.cg.domain.ProductViews@1e8839c]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchTransactions
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllTransactions
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Transaction@1f0ec38]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.MostBoughtProducts@1b6e338]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchMarketShare
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchMarketShare
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllTransactions
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Transaction@109df62]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchMarketShare
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.MarketShare@191dee6]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchOrderStatus
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchOrderStatus
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllOrders
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllOrders
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllOrders
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Order@c73a24]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchOrderStatus
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [0, 0]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchMerchant
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchMerchant
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllMerchants
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Merchant@187a8d0, com.cg.domain.Merchant@15c0603, com.cg.domain.Merchant@8edbc3, com.cg.domain.Merchant@fe0da7, com.cg.domain.Merchant@1327c96, com.cg.domain.Merchant@19163a5]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllFeedback
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllFeedback
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllFeedback
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           []
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchMerchant
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.MerchantRatings@117867b, com.cg.domain.MerchantRatings@17dfaed, com.cg.domain.MerchantRatings@1e4f90a, com.cg.domain.MerchantRatings@19a31bb, com.cg.domain.MerchantRatings@372d6f]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchProduct
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchProduct
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllProducts
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [Product [productId=P_01M_0001], Product [productId=P_02M_0001], Product [productId=P_03M_0001], Product [productId=P_04M_0001], Product [productId=P_05M_0001], Product [productId=P_06M_0001], Product [productId=P_07M_0001], Product [productId=P_08M_0001], Product [productId=P_09M_0001], Product [productId=P_10M_0001], Product [productId=P_11M_0002], Product [productId=P_12M_0002], Product [productId=P_13M_0002], Product [productId=P_14M_0002], Product [productId=P_15M_0002], Product [productId=P_16M_0002], Product [productId=P_17M_0002], Product [productId=P_18M_0002], Product [productId=P_19M_0002], Product [productId=P_20M_0002], Product [productId=P_21M_0005], Product [productId=P_21M_001], Product [productId=P_22M_0005], Product [productId=P_22M_001], Product [productId=P_23M_0005], Product [productId=P_23M_001], Product [productId=P_24M_0005], Product [productId=P_24M_001], Product [productId=P_25M_0005], Product [productId=P_25M_001], Product [productId=P_26M_0005], Product [productId=P_27M_0005], Product [productId=P_28M_0005], Product [productId=P_29M_0005], Product [productId=P_30M_0005], Product [productId=p_31M_0003], Product [productId=P_31M_001], Product [productId=p_32M_0003], Product [productId=P_32M_001], Product [productId=p_33M_0003], Product [productId=P_33M_001], Product [productId=p_34M_0003], Product [productId=P_34M_001], Product [productId=p_35M_0003], Product [productId=P_35M_001], Product [productId=P_36M_0003], Product [productId=P_37M_0003], Product [productId=P_38M_0003], Product [productId=P_39M_0003], Product [productId=P_40M_0003], Product [productId=P_41M_0004], Product [productId=P_41M_001], Product [productId=P_42M_0004], Product [productId=P_42M_001], Product [productId=P_43M_0004], Product [productId=P_43M_001], Product [productId=P_44M_0004], Product [productId=P_44M_001], Product [productId=P_45M_0004], Product [productId=P_45M_001], Product [productId=P_46M_0004], Product [productId=P_47M_0004], Product [productId=P_48M_0004], Product [productId=P_49M_0004], Product [productId=P_50M_0004], Product [productId=P_51M_001], Product [productId=P_52M_001], Product [productId=P_53M_001], Product [productId=P_54M_001], Product [productId=P_55M_001]]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllFeedback
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllFeedback
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllFeedback
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           []
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchProduct
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [ProductRatings [productId=P_01M_0001, rating=0.0, productName=Jeans, category=Clothing], ProductRatings [productId=P_02M_0001, rating=0.0, productName=T-shirt, category=Clothing], ProductRatings [productId=P_03M_0001, rating=0.0, productName=Trouser, category=Clothing], ProductRatings [productId=P_04M_0001, rating=0.0, productName=Jacket, category=Clothing], ProductRatings [productId=P_05M_0001, rating=0.0, productName=Casual Shirt, category=Clothing]]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchProductShare
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchProductShare
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllTransactions
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Transaction@128c736]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchProductShare
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [ProductShare [productid=P_21M_001, numberoftransactions=1, productName=xps]]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchQuarterRevenue
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchQuarterRevenue
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllTransactions
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Transaction@81711b]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchQuarterRevenue
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.RevenueTable@a447f]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchCategorySales
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchCategorySales
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllTransactions
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Transaction@a23775]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllCategories
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllCategories
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllCategories
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Category@11979f1, com.cg.domain.Category@194c0db, com.cg.domain.Category@10176fb, com.cg.domain.Category@12a94c0, com.cg.domain.Category@8be37e]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchCategorySales
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.CategoryCount@17a34f8, com.cg.domain.CategoryCount@2b8db8, com.cg.domain.CategoryCount@1653b88, com.cg.domain.CategoryCount@1276390, com.cg.domain.CategoryCount@f994f7]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    researchMarketShareRevenue
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     researchMarketShareRevenue
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getAllTransactions
+Sun Oct 27 21:15:11 IST 2013:       To be executing:     getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllTransactions
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.Transaction@e935db]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           researchMarketShareRevenue
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           [com.cg.domain.MarketShareRevenue@c9525f]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:11 IST 2013:       Excecuted:           getAllWishlist
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:11 IST 2013:       Returning:           ReportForAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:15:12 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:15:12 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:15:12 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:12 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:12 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:15:12 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:12 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:15:12 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getApprovedMerchants
+Sun Oct 27 21:15:41 IST 2013:       To be executing:     getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getApprovedMerchants
+Sun Oct 27 21:15:41 IST 2013:       To be executing:     getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:15:41 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:41 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:41 IST 2013:       Returning:           [com.cg.domain.Merchant@15527e5, com.cg.domain.Merchant@1ae3967, com.cg.domain.Merchant@13ad486, com.cg.domain.Merchant@156c3b0, com.cg.domain.Merchant@14986a9, com.cg.domain.Merchant@27d044]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:41 IST 2013:       Excecuted:           getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:15:41 IST 2013:       Method               getApprovedMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:41 IST 2013:       Excecuted:           getApprovedMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:15:41 IST 2013:       Method               getApprovedMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getOtherMerchants
+Sun Oct 27 21:15:43 IST 2013:       To be executing:     getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getOtherMerchants
+Sun Oct 27 21:15:43 IST 2013:       To be executing:     getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findAll
+Sun Oct 27 21:15:43 IST 2013:       To be executing:     findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:43 IST 2013:       Excecuted:           findAll
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:15:43 IST 2013:       Returning:           [com.cg.domain.Merchant@357995, com.cg.domain.Merchant@c12b76, com.cg.domain.Merchant@c557e, com.cg.domain.Merchant@1c0cb6d, com.cg.domain.Merchant@6b6e50, com.cg.domain.Merchant@117673a]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:43 IST 2013:       Excecuted:           getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:15:43 IST 2013:       Method               getOtherMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:15:43 IST 2013:       Excecuted:           getOtherMerchants
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:15:43 IST 2013:       Method               getOtherMerchants         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdminLogin
+Sun Oct 27 21:28:37 IST 2013:       To be executing:     showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:37 IST 2013:       Excecuted:           showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:28:37 IST 2013:       Returning:           Admin_Login
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:28:37 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:28:37 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:28:37 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:37 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:37 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:37 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:37 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:37 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdmin
+Sun Oct 27 21:28:43 IST 2013:       To be executing:     showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:43 IST 2013:       Excecuted:           showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:28:43 IST 2013:       Returning:           Admin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:28:43 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:28:43 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:28:43 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:43 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:43 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:43 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:43 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:43 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    openSetEmailPage
+Sun Oct 27 21:28:45 IST 2013:       To be executing:     openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:45 IST 2013:       Excecuted:           openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:28:45 IST 2013:       Returning:           SetEmailByAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setmaildetails
+Sun Oct 27 21:28:59 IST 2013:       To be executing:     setmaildetails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setpromomail1
+Sun Oct 27 21:28:59 IST 2013:       To be executing:     setpromomail1
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getEmails
+Sun Oct 27 21:28:59 IST 2013:       To be executing:     getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:59 IST 2013:       Excecuted:           getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:28:59 IST 2013:       Returning:           [kudupudi.kiran@capgemini.com, badireddy.aditya@capgemini.com, anand.t@capgemini.com, avijit.roy@capgemini.com]
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdminLogin
+Sun Oct 27 21:28:44 IST 2013:       To be executing:     showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:44 IST 2013:       Excecuted:           showAdminLogin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:28:44 IST 2013:       Returning:           Admin_Login
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:28:44 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:28:44 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:28:44 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:44 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:44 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:44 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:44 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:44 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    showAdmin
+Sun Oct 27 21:28:50 IST 2013:       To be executing:     showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:50 IST 2013:       Excecuted:           showAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:28:50 IST 2013:       Returning:           Admin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    uploadHandle4
+Sun Oct 27 21:28:50 IST 2013:       To be executing:     uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getSuggestedProducts
+Sun Oct 27 21:28:50 IST 2013:       To be executing:     getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    findOne
+Sun Oct 27 21:28:50 IST 2013:       To be executing:     findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:50 IST 2013:       Excecuted:           findOne
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:50 IST 2013:       Excecuted:           getSuggestedProducts
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:50 IST 2013:       Method               getSuggestedProducts         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:50 IST 2013:       Excecuted:           uploadHandle4
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Sun Oct 27 21:28:50 IST 2013:       Method               uploadHandle4         exception java.lang.NullPointerException
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    openSetEmailPage
+Sun Oct 27 21:28:55 IST 2013:       To be executing:     openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:28:55 IST 2013:       Excecuted:           openSetEmailPage
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:28:55 IST 2013:       Returning:           SetEmailByAdmin
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setmaildetails
+Sun Oct 27 21:29:09 IST 2013:       To be executing:     setmaildetails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    setpromomail1
+Sun Oct 27 21:29:09 IST 2013:       To be executing:     setpromomail1
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+Before setting The Method    getEmails
+Sun Oct 27 21:29:09 IST 2013:       To be executing:     getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After setting The Method Sun Oct 27 21:29:09 IST 2013:       Excecuted:           getEmails
+                                                                  
+------------------------------------------------------------------
+                                                                  
+------------------------------------------------------------------
+After Returning from the method  Sun Oct 27 21:29:09 IST 2013:       Returning:           [kudupudi.kiran@capgemini.com, badireddy.aditya@capgemini.com, anand.t@capgemini.com, avijit.roy@capgemini.com]
+                                                                  
+------------------------------------------------------------------

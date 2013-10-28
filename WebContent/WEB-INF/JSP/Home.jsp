@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,7 +10,7 @@
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
     <script src="resources/Script/login.js"></script>
     <script src="resources/Script/scripts.js"></script>
-     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+     <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> --> 
      <script src="resources/Script/jquery-2.0.3.min.js"></script>   
   <script src="resources/Script/jquery.slides.min.js"></script>
     <link rel="stylesheet" href="resources/Css/example.css">

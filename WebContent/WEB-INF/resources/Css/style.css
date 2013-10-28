@@ -524,25 +524,28 @@ label:before {
 
 td{
 	
-	font-size: 16px;
+	font-size: 13px;
 	font-stretch: expanded;
 	font-weight: 500;	
 	color: #254117;
+	text-align: center;
+	padding:5px;
 }
 						
 							 
 							  .middle-container{
 							  position: relative;
-							  left:2%;
+							  left:1%;
 							  height: 600px;
 							  margin-top:10%;
-							  width: 56%;
+							  width: 70%;
 							color:#3D0C02;
 							font-size: 14px;
 							font-stretch:expanded;
 							padding-top:2%;
 							padding-bottom:5%;
 							padding-left:5%;
+							padding-right:2%;
 							float:left;
 							/*  overflow-y: scroll !important  ; */
 							 overflow:hidden; 
@@ -559,10 +562,10 @@ td{
 							  }
 							  .middle-container:hover{
 							  position: relative;
-							  left:2%;
+							  left:1%;
 							  height: 600px;
 							  margin-top:10%;
-							  width: 56%;
+							  width: 70%;
 							color:#3D0C02;
 							font-size: 14px;
 							font-stretch:expanded;
@@ -571,6 +574,7 @@ td{
 							padding-left:5%;
 							float:left;
 							 overflow-y: scroll !important  ;
+							 overflow-x: scroll !important  ;
 							/*  overflow:hidden;  */
 							 background: url("../Images/cream_pixels.png");
     border: 2px  rgba(0,0,0,0.4);
@@ -583,7 +587,17 @@ td{
 							
 							  
 							  }
-					
+							  
+							  .middle-container table th{
+							  	color:#7F5217;
+							  	text-align: center;
+							  
+							    text-transform: capitalize;
+							    font-stretch: expanded;
+							    font-size: 18px;
+							  
+							  }
+						
 							  
 							
   
@@ -806,7 +820,46 @@ a.offer:hover{
 				-webkit-border-top-left-radius: 6px;
 }
 
-				  
+		
+		table{
+  border-collapse:collapse;
+  width:100%;
+}
+
+.blue{
+  border:2px solid #1ABC9C;
+}
+
+.blue thead{
+  background:#1ABC9C;
+}
+
+.purple{
+  border:2px solid #9B59B6;
+}
+
+.purple thead{
+  background:#9B59B6;
+}
+
+thead{
+  color:white;
+}
+
+th,td{
+  text-align:center;
+  padding:5px ;
+}
+
+ tr:nth-child(even){
+  background:#ECF0F1;
+}
+
+ tr:hover{
+background:#BDC3C7;
+  color:#FFFFFF;
+}
+		
 				  
 						.footer{
 					display:block;

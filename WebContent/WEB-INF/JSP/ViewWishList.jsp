@@ -12,7 +12,7 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
 <script src="resources/Script/login.js"></script>
 <script src="resources/Script/scripts.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
 <script src="resources/Script/jquery-2.0.3.min.js"></script>
 <script src="resources/Script/jquery.slides.min.js"></script>
 <link rel="stylesheet" href="resources/Css/example.css">

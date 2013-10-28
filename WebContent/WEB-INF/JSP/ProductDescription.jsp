@@ -6,189 +6,11 @@
 <title>Product Description</title>
 <link type="text/css" href="resources/Css/style.css" rel="stylesheet" />
 <link type="text/css" href="resources/Css/login.css" rel="stylesheet" />
-
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+ <script>src="resources/Script/jquery.slides.min.js"></script> 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script src="resources/Script/vishu.js"></script>
 <script src="resources/Script/login.js"></script>
 <script src="resources/Script/scripts.js"></script>
-
-<!-- <script>
-    
-//****************************************MRINAL SCRIPT**********************************************
-$(document).ready(function(){
-	              
-	
-	 //Stops the submit request=
- 
-    
-	 
-	$(document).on('click', '.usercheck',function(e){
-		 document.getElementById("hidd").value=this.value;
-		 document.getElementById("content").value="";
-		 
-	 });
-	 
-	 
-	 
-	
-	 
-	 
-	 
-    $("#post_feedback").click(function(e){
-    	
-    	
-    	
-    	
-        var rateString =document.getElementById("hrate").value;
-        alert("aditya");
-        
-        var feedString =document.getElementById("content").value;
-      
-        
-        if(document.getElementById("content").value.length==0){
-        	alert("Enter Feedback COntent");
-        } 
-        
-              
-        else{
-      
-        $.ajax({
-            type: "GET",
-            url: "postfeedback",
-            data: {"rateString":rateString,"feedString":feedString},
-            dataType: 'jsonp',
-            jsonp: 'callback',
-            jsonpCallback: 'jsonpCallback',
-             
-            //if received a response from the server
-            success: function( data, textStatus, jqXHR) {
-                //our country code was correct so we have some information to display
-                
-
-           	 $("#ajaxResponse").html("<div><b>Country code in Invalid!</b></div>");
-				
-           	document.getElementById("content").value="";
-                 
-            },
-       
-        
-            //If there was no resonse from the server
-            error: function(jqXHR, textStatus, errorThrown){
-                 console.log("Something really bad happened " + textStatus);
-                 $("#ajaxResponse").html(jqXHR.responseText);
-                 document.getElementById("content").value="";
-            },
-             
-            //capture the request before it was sent to server
-            beforeSend: function(jqXHR, settings){
-                //disable the button until we get the response
-                $('#myButton').attr("disabled", true);
-                document.getElementById("content").value="";
-            },
-             
-            //this is called after the response or error functions are finsihed
-            //so that we can take some action
-            complete: function(jqXHR, textStatus){
-                //enable the button 
-                $('#myButton').attr("disabled", false);
-            }
- 
-        });       
-        
-       
-        }  
-           
-});
-
-
-   
-  /*   
-    $(document).ready(function() {
-    $(".link1").click(function(event){
-       event.preventDefault();
-       var url =$(this).attr("href");
-       $('#right-pane').load(url);
-    });
-}); */
-    
-    
-    
-	 
-	 
-	 
-	 
-    $("#deleteme").click(function(e){
-        var dataString =hidd.value;
-        alert(dataString);
-        if(document.getElementById("hidd").value.length==0){
-        	alert("Select Data To delete");
-        }     
-        else{
-        $.ajax({
-            type: "GET",
-            url: "deletefeedback",
-            data: {"dataString":dataString},
-            dataType: 'jsonp',
-            jsonp: 'callback',
-            jsonpCallback: 'jsonpCallback',
-                     //If there was no resonse from the server
-            error: function(jqXHR, textStatus, errorThrown){
-                 $("#ajaxResponse").html(jqXHR.responseText);
-                 document.getElementById("hidd").value="";
-            },
-             
-          
-        });       
-        
-        }
-        
-        
-           
-});
-
-	 
-    
-    $("#show_feedback").click(function(e){
-    	
-     
-        $.ajax({
-            type: "GET",
-            url: "view1feedback",
-            data: {"dataString":"2"},
-            dataType: 'jsonp',
-            jsonp: 'callback',
-            jsonpCallback: 'jsonpCallback',
-             
-                       error: function(jqXHR, textStatus, errorThrown){
-                 $("#ajaxResponse").html(jqXHR.responseText);
-            },
-             
-           
-        });       
-                  
-});
- 
-	
-	
-});
-
-
-</script>
-
-
-<script>
-
-//**************************************VISWANATH WORK**********************************************
-
-    function jsonpCallback(data) {
-        console.log("callback",data);
-        //do nothing    
-    }
-    
-
-   
-</script> -->
 <!-- praveen scrippt -->
 <script>
 $(document).ready(function(){
@@ -231,25 +53,14 @@ $(document).ready(function(){
 		}else {
 			
 		}
-	
-
 	}, 
 
 	error : function(e) { 
-
-
 	alert('Error: ' + e); 
-	
-
 	} 
-
-	}); 
-	
-
+}); 
 	});
-	
 	$("input[name='qty']").blur(function(){
-		
 		var qty = $("#qty").val();
 		
 		if (qty=="") {
@@ -262,9 +73,6 @@ $(document).ready(function(){
 		else{
 			alert("Enter valid phone no");
 		}
-
-		
-
 		var status = '';
 
 		$.ajax({ 
@@ -304,7 +112,7 @@ $(document).ready(function(){
 
 		});
 
-	});
+});
 function displayResult(r1)
 {
 document.getElementById("result").value=r1;
@@ -316,42 +124,21 @@ document.getElementById("result").value=r1;
 
 
 $(document).ready(function(){
-	              
-	
 	 //Stops the submit request=
- 
-    
-	 
 	$(document).on('click', '.usercheck',function(e){
 		 document.getElementById("hidd").value=this.value;
 		 document.getElementById("content").value="";
 		 
-	 });
-	 
-	 
-	 
-	
-	 
-	 
+	});
 	 
     $("#post_feedback").click(function(e){
-    	
-    	
-    	
-    	
         var rateString =document.getElementById("hrate").value;
         alert(rateString);
-        
         var feedString =document.getElementById("content").value;
-      
-        
         if(document.getElementById("content").value.length==0){
         	alert("Enter Feedback COntent");
         } 
-        
-              
         else{
-      
         $.ajax({
             type: "GET",
             url: "postfeedback",
@@ -363,53 +150,37 @@ $(document).ready(function(){
             //if received a response from the server
             success: function( data, textStatus, jqXHR) {
                 //our country code was correct so we have some information to display
-                
-
            	 $("#ajaxResponse").html("<div><b>Country code in Invalid!</b></div>");
-				
            	document.getElementById("content").value="";
-                 
             },
-       
-        
             //If there was no resonse from the server
             error: function(jqXHR, textStatus, errorThrown){
                  console.log("Something really bad happened " + textStatus);
                  $("#ajaxResponse").html(jqXHR.responseText);
                  document.getElementById("content").value="";
             },
-             
             //capture the request before it was sent to server
             beforeSend: function(jqXHR, settings){
                 //disable the button until we get the response
                 $('#myButton').attr("disabled", true);
                 document.getElementById("content").value="";
             },
-             
             //this is called after the response or error functions are finsihed
             //so that we can take some action
             complete: function(jqXHR, textStatus){
                 //enable the button 
                 $('#myButton').attr("disabled", false);
             }
- 
         });       
-        
-       
-        }  
-           
+        } ; 
 });
 
 
-   
-    
-    $(document).ready(function() {
     $(".link1").click(function(event){
-       event.preventDefault();
-       var url =$(this).attr("href");
-       $('#right-pane').load(url);
-    });
-});	 
+        event.preventDefault();
+        var url =$(this).attr("href");
+        $('#right-pane').load(url);
+     });	 
     $("#deleteme").click(function(e){
         var dataString =hidd.value;
         alert(dataString);
@@ -448,7 +219,7 @@ $(document).ready(function(){
 });	
 });
 </script>  
-<script>
+<script type="text/javascript">
 //**************************************VISWANATH WORK**********************************************
 $(document).ready(function(){
 	  //make the AJAX request, dataType is set to json
@@ -462,10 +233,14 @@ $(document).ready(function(){
 	        error: function(jqXHR, textStatus, errorThrown){
 	              $("#ajaxResponse2").html(jqXHR.responseText);
 	        }, 
-	    });         	 
-	 });
+	    });
+
+	  
+	  
+});
     function jsonpCallback(data) {
         console.log("callback",data);
+        //callfeedback();
         //do nothing    
     }
 </script>
@@ -603,10 +378,6 @@ function setdata(tmp){
 				</fieldset>
 			</div>
 		</div>
-
-
-
-
 		<div class="bottom-container">
 			<div class="bottom-container1">
 

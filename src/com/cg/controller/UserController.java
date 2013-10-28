@@ -371,19 +371,14 @@ public class UserController {
 
 		}
 	}
-
-
-
-
-
 	//********************************VISWANATH WORK**************************************
-
-
 	@RequestMapping(value="getSuggestions",method=RequestMethod.GET)
 	@ResponseBody
 	public void uploadHandle4(HttpServletRequest request,ModelMap m,HttpServletResponse response) throws IOException{
 
-		String prod_id=(String) request.getSession().getAttribute("productId");
+		HttpSession  session=request.getSession();
+		String prod_id=(String)session.getAttribute("productId");
+		System.out.println("here"+prod_id);
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		/*prod_id="P_21M_001";*/
@@ -396,6 +391,8 @@ public class UserController {
 			out.print(list.get(i).getProductName());
 			out.println(list.get(i).getProductBrand());
 			out.println(list.get(i).getProductCost()+"<br>");
+//			out.println("<input type=\"checkbox\" value="+list.get(i).getProductName()+"/>"+"<a href=\"prod?prod_id="+list.get(i).getProductId()+"\">"+list.get(i).getProductName()+"</a>"+"<br>"+list.get(i).getProductBrand()+"<br>"+list.get(i).getProductCost()+"<br>");
+
 		}
 	}
 
@@ -424,7 +421,7 @@ public class UserController {
 			
 			rate1=Double.parseDouble(rate);
 		}	
-		if(userid.isEmpty()){
+		if(userid==null){
 
 			userid="Anonymous";
 		}

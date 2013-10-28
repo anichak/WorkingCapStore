@@ -29,50 +29,29 @@ for( var i=0;i<chklist.length;i++){
 		x.innerHTML="PENDING";  
 	}
 }
-	
   // Change the content
 } 
-
 function setVal(temp){
-	
 	/* alert(temp.value); */
-	document.getElementById("prodid").value=temp.value;
-	
+	document.getElementById("prodid").value=temp.value;	
 }
-
-
-
 function validate()
 {
   var retval = true;
-  for (var i=0; i < document.formmessage.r.length; i++)
-  {
-    if (document.formmessage.r[i].checked)
-    {
-      retval = true;
-    }
-    else{
-    	retval=false;
-    }
-  }  
-
+  if(document.formmessage.r.checked){
+	  retval = true;
+  }
+  else{
+  	retval=false;
+  }
   return retval;
 }
-	
 </script>
 </head>
-
 <body onload="noBack();">
-
-
 <jsp:useBean id="now" class="java.util.Date"></jsp:useBean>
-
-
 <form name="formmessage" action="customerreturn" method="post" onsubmit="return validate()" >
-  
-  
   <table align=center border='2' cellpadding='10' cellspacing='5'>
-    
     <tr>
     <th>OrderDetails
       <th>Order ID
@@ -82,9 +61,7 @@ function validate()
       <th>Delivery Date
       <th>Return Status
       <th>
-      
     </tr>
-   
     <c:forEach items="${list}" var="id">
     <tr>
     <td><a href="view_detail?order_id=${id.orderId}">Get Details</a></td>
@@ -95,7 +72,6 @@ function validate()
       <td><c:out value="${id.deliveryDate}"/>
       <td id="${id.orderId}"><c:out value="${id.returnStatus}"/>
        <fmt:formatDate pattern="yyyy-MM-dd" value="${id.deliveryDate}" type="date" var="datedb" />   <!-- sql -->
-      
        <fmt:parseDate pattern="yyyy-MM-dd" value="${datedb}" var="datedb1" type="date" />   <!-- util -->
       <c:if test="${fn:contains(id.shippingStatus, 'Reached')}">
        <c:set var="datedb2" scope="page" value="${datedb1.getTime()}"/>
@@ -106,15 +82,10 @@ function validate()
       </c:if>
       </c:if>
        </c:if> 
-       
     </tr>
    </c:forEach>
-   
   </table>
-
-
 <input type="hidden"  id="prodid" name="prodid">
-
 <br/><br/><br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -122,15 +93,8 @@ function validate()
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
 <input type="submit" id="customerreturn" name="customerreturn" value="RETURN" >
 <input type="hidden" name="hidd" id="hidd"/>
 </form>
-	
-
-
-
-
 </body>
 </html>

@@ -591,6 +591,7 @@ public class ServiceClass {
 	@Transactional
 	public List<Merchant> getPendingMerchants() {
 		List<Merchant> allMer = idaomerchant.findAll();
+		
 		Properties pro = Status.getMerchantStatus();
 		List<Merchant> pendingMer = new ArrayList<Merchant>();
 		for (Merchant m : allMer) {
@@ -1711,9 +1712,8 @@ public class ServiceClass {
 	private	List<Product> list_product ;
 	@Transactional
 	public List<Product> getSuggestedProducts(String product_id){
-		int i =0;
-
- product_id="P_21M_0001";
+		int i =0;	
+		//product_id="P_21M_0001";
 		Product product=idaoproduct.findOne(product_id);
 
 		String categoryid=product.getCategory().getCategoryId();
@@ -2458,9 +2458,7 @@ public class ServiceClass {
 		rti.setReturnStatus("Pending");
 		rti.setReturnstatusId(Long.parseLong(s[8]));
 		idaoreturneditem.saveAndFlush(rti);
-
 	}
-
 	@Transactional
 	public void setReturnStatus(String prodid) {
 
@@ -2476,9 +2474,7 @@ public class ServiceClass {
 				break;
 			}
 		}
-
 	}
-
 	@Transactional
 	public void setReturnApprove(long returnstatusId,String productId) {
 

@@ -13,7 +13,8 @@
 <script src="resources/Script/scripts.js"></script>
 <link type="text/css" href="resources/Css/jquery-ui.css"
 	rel="stylesheet">
-<script src="resources/Script/jquery-1.9.1.js"></script>
+<!-- <script src="resources/Script/jquery-1.9.1.js"></script> -->
+<script src="resources/Script/jquery-2.0.3.min.js"></script>
 <script src="resources/Script/jquery-ui.js"></script>
 <script type="text/javascript">
 	$(document)
