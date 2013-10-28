@@ -20,6 +20,7 @@ import java.util.zip.ZipInputStream;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
@@ -52,6 +53,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 
+import com.cg.bankservice.BankWebService;
+import com.cg.bankservice.BankWebServiceService;
 import com.cg.domain.Advertisement;
 import com.cg.domain.AdvertisementMedia;
 import com.cg.domain.Category;
@@ -114,10 +117,14 @@ import com.cg.repository.IDaoProduct;
 import com.cg.repository.IDaoShipping;
 import com.cg.repository.IDaoViewcount;
 import com.cg.repository.IDaoWishlist;
+import com.cg.util.ImageProdId;
+import com.cg.util.ProductDescAndImage;
 import com.cg.util.Status;
 
 @Service
 public class ServiceClass {
+	@Value("#{img['ipaddress2']}")	
+	String ipaddress;
 	@Autowired
 	public IDaoAdvertisement idaoadvertisement;
 	@Autowired
@@ -714,7 +721,6 @@ public class ServiceClass {
 
 			System.out.println(ex);
 		}
-
 	}
 	/*Alok's Module starts*/
 	@Transactional
@@ -746,30 +752,30 @@ public class ServiceClass {
 		String line = "";
 		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 		Date d=new Date();
-		String mediapath=null;
+		//String mediapath=null;
 		//ModelMap map=new ModelMap();
 		List<ProductMediaPath> mediapathobjects=new ArrayList<ProductMediaPath>();
-		try {
-			while((line = br.readLine()) != null) {  
-				Merchant m=new Merchant();
-
-				Category cat=new Category();
-				String[] fields = line.split(",");
-				cat.setCategoryId(fields[1]);
-				m.setMerchantId(fields[2]);		
-				Product p = new Product(fields[0],cat,m,fields[3],Double.parseDouble(fields[4]),d,fields[5],fields[6],Long.parseLong(fields[7]));
-				mediapath=null;
-				ProductMediaPath productmediapath=new ProductMediaPath(p,mediapath);
-				mediapathobjects.add(productmediapath);
-				map.put("productmedias",mediapathobjects);
-				pojoList.add(p);
+		 try {
+				while((line = br.readLine()) != null) {  
+					   Merchant m=new Merchant();
+					   Category cat=new Category();
+				       String[] fields = line.split(",");
+				       cat.setCategoryId(fields[1]);
+				       m.setMerchantId(fields[2]);
+				       String ins=fields[8];
+				      
+				       if(ins.equalsIgnoreCase("update")){
+				       Product p = new Product(fields[0],cat,m,fields[3],Double.parseDouble(fields[4]),d,fields[5],fields[6],Long.parseLong(fields[7]));
+				       pojoList.add(p);
+			
+				       }
+				       else 
+				    	   continue;
+				   }
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} 
-		catch (IOException e) {
-			br.close();
-
-			e.printStackTrace();
-		}
 		return pojoList;
 
 	}
@@ -1037,95 +1043,6 @@ public class ServiceClass {
 	} 
 
 
-
-	/*Sushma's module*/
-	/*
-	private static final int BUFFER_SIZE = 4096;
-
-	public void unzip(String zipFilePath) throws IOException {
-		String destDirectory="C:/p1";
-		File destDir = new File(destDirectory);
-		if (!destDir.exists()) {
-			destDir.mkdir();
-		}
-		ZipInputStream zipIn = new ZipInputStream(new FileInputStream(zipFilePath));
-		ZipEntry entry = zipIn.getNextEntry();
-
-
-		while (entry != null) {
-			String filePath = destDirectory + File.separator + entry.getName();
-			String fstring=null;
-
-			if (!entry.isDirectory()) {
-
-				if(filePath.contains(".jpg")){
-					int i=filePath.indexOf(".");
-					fstring=filePath.substring(0,i);
-					Long time=new java.util.Date().getTime();
-					fstring=fstring+time+".jpg";
-				}
-
-
-				extractFile(zipIn, fstring);
-			} else {
-
-				File dir = new File(filePath);
-				dir.mkdir();
-			}
-			zipIn.closeEntry();
-			entry = zipIn.getNextEntry();
-		}
-		zipIn.close();
-	}
-
-	private void extractFile(ZipInputStream zipIn, String filePath) throws IOException {
-		BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(filePath));
-		byte[] bytesIn = new byte[BUFFER_SIZE];
-		int read = 0;
-		while ((read = zipIn.read(bytesIn)) != -1) {
-			bos.write(bytesIn, 0, read);
-		}
-		bos.close();
-	}
-
-	public void extracteFiles(String url,String spath,Product product){
-
-		String fpath=null;
-		String[] sarr=spath.split("/");
-		for (String string : sarr) {
-			if(string.contains(".zip")){
-				int i=string.indexOf(".");
-				fpath=string.substring(0,i);
-			}
-		}
-		String dpath="C://p1//"+fpath;
-		File folder = new File(dpath);
-		if (!folder.exists()) {
-			folder.mkdir(); 
-		}
-
-		File[] listOfFiles = folder.listFiles();
-		Long time=new java.util.Date().getTime();
-
-		for (int i = 0; i < listOfFiles.length; i++) {
-
-			if (listOfFiles[i].isFile()) {
-				String FileName=url+"/"+fpath+"/"+listOfFiles[i].getName();
-				Media m_arg=new Media();
-				m_arg.setMediaPath(FileName);
-				m_arg.setMediaType("images");
-				m_arg.setProduct(product);
-				idaomedia.saveAndFlush(m_arg);
-			} else if (listOfFiles[i].isDirectory()) {
-
-			}
-		}
-	}
-	public String getImages() {
-		List<Media> mlist=idaomedia.findAll();
-		Media m=mlist.get(0);
-		return m.getMediaPath();
-	}*/
 	/*Deepika's module*/
 	List<AdvertisementMedia> adList;
 	List<AdvertisementMedia> adList1;
@@ -1681,27 +1598,35 @@ public class ServiceClass {
 	//********************************MURSID WORK**********************************************
 
 	@Transactional
-	public ProductDesc getDetail(String prod_id) {
+	public List<ProductDesc> getDetail(String prod_id) {
 		// TODO Auto-generated method stub
-		ProductDesc desc=new ProductDesc();
-		ProductDescription pd=idaoproductdescription.getByProductId(prod_id);
+		
+/*		Product pro=idaoproduct.findOne(prod_id);*/
+		List<ProductDescription> pd=idaoproductdescription.getByProductId(prod_id);
+		List<ProductDesc> list=new ArrayList<ProductDesc>();
+		for(ProductDescription p:pd){
+			
+			if(p.getProduct().getProductId().equals(prod_id)){
+				ProductDesc desc=new ProductDesc();
+				desc.setProddesc(p);
+				desc.setProduct(p.getProduct());
+				list.add(desc);
+			}
+		}
+		
+		
 
-		desc.setProddesc(pd);
-
-		Product pro=idaoproduct.findOne(prod_id);
-		desc.setProduct(pro);
-
-		return desc;
+		return list;
 	}
 
 
 	@Transactional
-	public String getMediaPath(String prod_id) {
+	public List<Media> getMediaPath(String prod_id) {
 		// TODO Auto-generated method stub
 
+Product p=idaoproduct.findByProductId(prod_id);
 
-
-		return idaomedia.mediaReturn(prod_id) ;
+		return idaomedia.findByMediaTypeAndProduct("image",p) ;
 	}	
 
 
@@ -1733,7 +1658,7 @@ public class ServiceClass {
 		return list_product1;
 	}
 
-	/**************Pending work***************/
+	/**************Pending work***************//*
 	private	List<Media> list_media ;
 	@Transactional
 	public List<Media> getMediaPath1(List<Product> list) {
@@ -1741,7 +1666,8 @@ public class ServiceClass {
 		List<Media> list_media = new ArrayList<Media>();
 		for (Product product : list) {
 			Media me=new Media();
-			Long id=idaomedia.mediaReturnId(product.getProductId());
+			List<Media> id=idaomedia.mediaReturnId(product.getProductId());
+			
 			me.setMediaId(id);
 			String path=idaomedia.mediaReturn(product.getProductId());
 			me.setMediaPath(path);
@@ -1752,15 +1678,8 @@ public class ServiceClass {
 
 		return list_media;
 
-	}
-
-
-
-
-
-
-
-
+	}*/
+	
 	//***************************MRINAL INTEGRATION************************************
 
 
@@ -1920,33 +1839,21 @@ public class ServiceClass {
 							list_schemeoffer.add(so);
 						}
 					}else {
-						if (idaoproduct.findOne(get_id).getProductStock()>=(Long.parseLong(offer.getValue()))) {
-							
-							
+						if (idaoproduct.findOne(get_id).getProductStock()>=(Long.parseLong(offer.getValue()))) {	
 							so.setScheme(s);
 							so.setOffer(s.getOffer());
 							list_schemeoffer.add(so);
 						}
 					}
-				}else {
-
-					
+				}else {				
 					so.setScheme(s);
 					so.setOffer(s.getOffer());
 					list_schemeoffer.add(so);
 				}
-
-
-
 			}
-
 		}
-
 		return list_schemeoffer;
 	}
-
-
-
 	/*==============================Ghanshyam service======================================*/
 	@Transactional
 	public List<ProductMedia> sortRelatedProductOnSelect(String countryCode) {
@@ -1960,9 +1867,6 @@ public class ServiceClass {
 		return fli1;
 
 	}
-
-
-
 	@Transactional
 	public List<ProductMedia> sortRelatedProductOnSelectLowerTo(String countryCode) {
 		List<ProductMedia> li1=new ArrayList<ProductMedia>();
@@ -1972,12 +1876,9 @@ public class ServiceClass {
 		Collections.reverse(li1);
 		for (ProductMedia p : li1) {
 			fli1.add(p);
-		}
-		
+		}	
 		return fli1;
-
 	}
-
 	@Transactional
 	public boolean setOnGivenD(String productId,long vew_count,String cat_gory) {
 		long i=1;
@@ -2044,7 +1945,6 @@ public class ServiceClass {
 
 				}
 			}
-
 		} 
 		List<ProductMedia> finallist = new ArrayList<ProductMedia>();
 		for (Media m : li1) {
@@ -2058,19 +1958,10 @@ public class ServiceClass {
 			}
 		}
 		return finallist;
-
 		/*===============================ghanshyam service=======================================*/
-
 	}
-
-
-
-
 	/*============================ghanshyam raut comparator class=========================*/
-
-
-	
-	@Transactional
+@Transactional
 	public boolean chechList(String userid, String productid){
 		boolean c=true;
 		for(Wishlist check:getAllWishList()){
@@ -2141,6 +2032,29 @@ public class ServiceClass {
 	private List<Double> prodCost = new ArrayList<Double>();
 	
 	private List<ProductSold> crashRecoveredList= new ArrayList<ProductSold>();
+	
+	
+	
+
+	@Transactional
+	public List<ProductMedia> getItems(String prod) {
+		List<Media> li = idaomedia.findAll();
+		List<ProductMedia> finallist = new ArrayList<ProductMedia>();
+		for (Media m : li) {
+			if (m.getProduct().getProductTag().contains(prod)) {
+				ProductMedia pm = new ProductMedia();
+				pm.setM(m);
+				String pid = m.getProduct().getProductId();
+				Product p = idaoproduct.findOne(pid);
+				pm.setP(p);
+				finallist.add(pm);
+			}
+		}
+		return finallist;
+	}
+	
+	
+	
 	
 	@Transactional
 	public List<ProductSold> calculateProductDiscount( HttpSession session, HttpServletRequest request){
@@ -2444,7 +2358,7 @@ public class ServiceClass {
 
 	@Transactional
 	public void setReturnedItems(String prodid) {
-		System.out.println("here"+prodid);
+		
 
 		Returneditem rti = new Returneditem();
 		String[] s = prodid.split(",");
@@ -2476,11 +2390,18 @@ public class ServiceClass {
 		}
 	}
 	@Transactional
-	public void setReturnApprove(long returnstatusId,String productId) {
+	public void setReturnApprove(long returnstatusId,String productId,long transactionId,double productCost) {
 
-		System.out.println("Service--"+productId);
+		
 		
 		idaoproduct.updateInventory(productId);
+		
+		BankWebServiceService b=new BankWebServiceService();
+
+		BankWebService bs=b.getBankWebServicePort();
+
+		bs.refund(transactionId,(float) productCost, "Product Refund");
+
 
 		idaoreturneditem.setReturnedApprove(returnstatusId);
 
@@ -2516,8 +2437,8 @@ public class ServiceClass {
 	
 	@Transactional
 	public List<CustomerDetails> getOrderDetails(String userId) {
-		System.out.println("here details");
-		System.out.println(idaotransaction.getCustomerDetails(userId));
+		
+		
 		return idaotransaction.getCustomerDetails(userId);
 	
 	}
@@ -2548,7 +2469,72 @@ public class ServiceClass {
 	}
 	
 	
+	/*Mayur*/
+	@Transactional
+	public void findSimilarProducts(String productId, ModelMap map) {
+		// TODO Auto-generated method stub
+		Product product=idaoproduct.findByProductId(productId);
+		String[] selected_prod_tags=product.getProductTag().split(" ");
+		List<Product> prod_list=idaoproduct.findByCategory(product.getCategory());
+		List<ImageProdId> mediaList=new ArrayList<ImageProdId>();
+		
+		for(Product p:prod_list){
+			
+			if(p.getProductId().equalsIgnoreCase(product.getProductId())){
+				
+				continue;
+			}
+			String similar_tags=p.getProductTag();
+			for(String tag:selected_prod_tags){
+				if(similar_tags.contains(tag)){
+					String imagePath=new String();
+					imagePath=ipaddress;
+					ImageProdId temp=new ImageProdId();
+					
+					
+					List<Media> similar_product=idaomedia.findByMediaTypeAndProduct("image",p);
+					
+					
+					Media similar_product_media=similar_product.get(0);
+					imagePath=imagePath.concat(similar_product_media.getMediaPath());
+					temp.setImgPath(imagePath);
+					temp.setProdId(similar_product_media.getProduct().getProductId());
+					mediaList.add(temp);
+					break;
+				}
+			}	
+		}
+		map.put("imageListSize",mediaList.size());
+		map.put("productList",mediaList);
+		//return map;
+	}
 	
+	@Transactional
+	public void getProductDescription(String[] comparisonProducts, String productId, ModelMap map) {
+		// TODO Auto-generated method stub
+		List<ProductDescAndImage> productDescImage=new ArrayList<ProductDescAndImage>();
+		List<Media> selectedProductMedia=idaomedia.findMediaTypeByProduct(idaoproduct.findByProductId(productId));
+		Product selectedProduct=idaoproduct.findByProductId(productId);
+		List<ProductDescription> selected_prod_desc=idaoproductdescription.findAttributeNameAndAtrributeValueByProduct(selectedProduct);
+		ProductDescAndImage curr_prod=new ProductDescAndImage();
+		curr_prod.setImage(selectedProductMedia.get(0).getMediaPath());
+		curr_prod.setProddescription(selected_prod_desc);
+		productDescImage.add(curr_prod);
+
+		for(String prodId:comparisonProducts){
+			ProductDescAndImage temp=new ProductDescAndImage();
+			Product comparisonProduct=new Product();
+			comparisonProduct=idaoproduct.findByProductId(prodId);
+			List<ProductDescription> prod_desc=idaoproductdescription.findAttributeNameAndAtrributeValueByProduct(comparisonProduct);
+			List<Media> mediaPath=idaomedia.findByMediaTypeAndProduct("IMAGE",idaoproduct.findByProductId(prodId));
+			String imagePath=ipaddress+mediaPath.get(0).getMediaPath();
+			temp.setProddescription(prod_desc);
+			temp.setImage(imagePath);
+			productDescImage.add(temp);
+		}
+		
+		map.put("productDescription",productDescImage);
+	}
 	
 	
 	

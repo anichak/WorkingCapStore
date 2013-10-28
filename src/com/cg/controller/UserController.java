@@ -3,7 +3,9 @@ package com.cg.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +29,7 @@ import com.cg.domain.Media;
 import com.cg.domain.MediaPath;
 import com.cg.domain.Product;
 import com.cg.domain.ProductDesc;
+import com.cg.domain.ProductDescription;
 import com.cg.domain.ProductMedia;
 import com.cg.domain.ProductMediaPath;
 import com.cg.domain.ProductSold;
@@ -206,11 +210,6 @@ public class UserController {
 
 	}
 	/*Abhishek+Mrinal+Sk+Dinesh+Ghanshyam+Vishwanath*/
-
-	@RequestMapping(method = RequestMethod.GET)
-	public String showHome() {
-		return "Home";
-	}
 	@Value("#{img['ipaddress2']}")	
 	String ipaddress;
 	@RequestMapping(value = "tsearch", method = RequestMethod.GET)
@@ -229,21 +228,29 @@ public class UserController {
 			HttpServletResponse response) throws IOException {
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-
 		List<ProductMedia> leftcontentlist = new ArrayList<ProductMedia>();
 		String searchdata = request.getParameter("searchdata");
 		leftcontentlist = sc.getInitialProducts(searchdata);
+		String temp="tdijava";
+		int co=0;
 		for (ProductMedia p : leftcontentlist) {
-			out.print("<img src=\""+ipaddress+p.getM().getMediaPath()+"\">");
-			out.println("<br><input type=\"checkbox\" value="
-					+ p.getP().getProductName() + ">"
-					+ p.getP().getProductName() + "<br>"
-					+ p.getP().getProductBrand() + "<br>"
-					+ p.getP().getProductCost() + "<br>");
-
-			/*out.println("<a href=\"prod?prod_id=\"" + p.getP().getProductId()
-					+ "> Buy Now </a>");*/
-			out.println("<input type=\"checkbox\" value="+p.getP().getProductName()+"/>"+"<a href=\"prod?prod_id="+p.getP().getProductId()+"\">"+p.getP().getProductName()+"</a>"+"<br>"+p.getP().getProductBrand()+"<br>"+p.getP().getProductCost()+"<br>");
+			co=0;
+			if(temp.equals(p.getP().getProductName())){
+				co++;
+			}
+			else{
+				co=0;
+			}
+			if(co<1){
+				out.print("<img src=\""+ipaddress+p.getM().getMediaPath()+"\">");
+				out.println("<br>"
+						+ p.getP().getProductName() + "<br>"
+						+ p.getP().getProductBrand() + "<br>"
+						+ p.getP().getProductCost() + "<br>");
+				out.println("<a href=\"prod?prod_id="+p.getP().getProductId()+"\">"+p.getP().getProductName()+"</a><br>");
+		
+		}
+			temp=p.getP().getProductName();
 		}
 	}
 	@RequestMapping(value = "getInitialSearchData", method = RequestMethod.GET)
@@ -256,17 +263,48 @@ public class UserController {
 
 		List<ProductMedia> leftcontentlist = new ArrayList<ProductMedia>();
 
+		String temp="tdijava";
+		int co=0;
 		leftcontentlist = sc.setSearchData();
 		out.print("<datalist id=\"awards\" list=\"awards\"><select>");
 		for (ProductMedia p : leftcontentlist) {
+			co=0;
+			if(temp.equals(p.getP().getProductName())){
+				co++;
+			}
+			else{
+				co=0;
+			}
+			if(co<1){
 
 			out.print("<option value=\"" + p.getP().getProductName()
 					+ "\"></option>");
+			}
+			temp=p.getP().getProductName();
 		}
 		out.print("</select></datalist>");
 
 	}
-	//*****************MURSID + ABHISHEK + DINESH + GHANSHYAM*************************************
+	@RequestMapping(value = "getItems", method = RequestMethod.GET)
+	@ResponseBody
+	public void getComputers(HttpServletRequest request, ModelMap m,
+			HttpServletResponse response) throws IOException {
+		PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+
+		List<ProductMedia> leftcontentlist = new ArrayList<ProductMedia>();
+		String searchdata = request.getParameter("dataString");
+		leftcontentlist = sc.getItems(searchdata);
+		for (ProductMedia p : leftcontentlist) {
+			out.print("<img src=\""+ipaddress+p.getM().getMediaPath()+"\">");
+			out.println("<br>"
+					+ p.getP().getProductName() + "<br>"
+					+ p.getP().getProductBrand() + "<br>"
+					+ p.getP().getProductCost() + "<br>");
+			out.println("<a href=\"prod?prod_id="+p.getP().getProductId()+"\">"+p.getP().getProductName()+"</a><br>");
+		}
+	}
+//*****************MURSID + ABHISHEK + DINESH + GHANSHYAM*************************************
 	@RequestMapping(value = "getProductNames", method = RequestMethod.GET)
 	@ResponseBody
 	public void getProductNames(HttpServletRequest request, ModelMap m,
@@ -279,22 +317,23 @@ public class UserController {
 		List<ProductMedia> leftcontentlist = new ArrayList<ProductMedia>();
 		List<Product> midcontentlist = new ArrayList<Product>();
 		leftcontentlist = sc.searchRelatedProduct(brandCode);
-		out.println("<div align=\"center\">");
-		out.println("<table border=\"1\" bgcolor=\"skyblue\"><tr><th>SORT BY SELECTION</th></tr>");
-		out.println("<tr><td bgcolor=\"cyan\">");
-		out.println("<select value="+brandCode+"  name="+brandCode+" id="+brandCode+"  class=\"types11\"<br>");
-		out.println("<option value=\"\">Select Account ID</option>");	            
-		out.println("<option value=\"hl\" id="+brandCode+">Higher to lower</option>");		            
-		out.println("<option value=\"lh\">Lower to higher</option>");
-		out.println("<option value=\"br\">Best On Rating</option>");
-		out.println("</select>");
-		out.println("</tr></td>");
-		out.println("</table>");
-		out.println("</div>");
+		out.println("<input type=\"hidden\" name="+brandCode+" value="+brandCode+"id="+brandCode+"class=\"types11\" >");
+		String temp="tdijava";
+		int co=0;
 		for (ProductMedia p : leftcontentlist) {
+			co=0;
+			if(temp.equals(p.getP().getProductName())){
+				co++;
+			}
+			else{
+				co=0;
+			}
+			if(co<1){
 			out.print("<img src=\""+ipaddress+p.getM().getMediaPath()+"\">");			
 			out.println("<input type=\"checkbox\" value="+p.getP().getProductName()+"/>"+"<a href=\"prod?prod_id="+p.getP().getProductId()+"\">"+p.getP().getProductName()+"</a>"+"<br>"+p.getP().getProductBrand()+"<br>"+p.getP().getProductCost()+"<br>");
-		}
+			}
+			temp=p.getP().getProductName();
+			}
 
 	}
 	@RequestMapping(value="/prod",method= RequestMethod.GET)
@@ -305,21 +344,20 @@ public class UserController {
 		tt=sc.setOnGivenD(prod_id,vew_count,cat_gory);
 		HttpSession session = request.getSession();
 		session.setAttribute("productId", prod_id);
-		ProductDesc pd= sc.getDetail(prod_id);
-		String path = sc.getMediaPath(prod_id);
-
+		List<ProductDesc> pd= sc.getDetail(prod_id);
+		List<Media> path = sc.getMediaPath(prod_id);
+		
+		map.put("selectedProduct",prod_id);
+		sc.findSimilarProducts(prod_id,map);
 		List<SchemeOffer> list = sc.getAllSchemeByProductIDInProduct(prod_id);
 		map.addAttribute("listDiscount", list);
 		map.addAttribute("list1",pd);	
-		map.addAttribute("path",ipaddress+path);
-
+		map.addAttribute("path",ipaddress+path.get(0).getMediaPath());
+		double avg=avgrate(request);
+		map.addAttribute("rating",avg);
 		return "ProductDescription";
 	}
-
-
-
-
-	//**************************************ABHISHEK WORK***************************************
+//**************************************ABHISHEK WORK***************************************
 
 
 	@RequestMapping(value = "getBrandNames", method = RequestMethod.GET)
@@ -365,10 +403,22 @@ public class UserController {
 		List<ProductMedia> leftcontentlist = new ArrayList<ProductMedia>();
 		leftcontentlist = sc.searchRelatedProductPriceWise(brandCode, minprice,
 				maxprice);
+		String temp="tdijava";
+		int co=0;
 		for (ProductMedia p : leftcontentlist) {
+			
+			co=0;
+			if(temp.equals(p.getP().getProductName())){
+				co++;
+			}
+			else{
+				co=0;
+			}
+			if(co<1){
 			out.print("<img src=\""+ipaddress+p.getM().getMediaPath()+"\">");
 			out.println("<input type=\"checkbox\" value="+p.getP().getProductName()+"/>"+"<a href=\"prod?prod_id="+p.getP().getProductId()+"\">"+p.getP().getProductName()+"</a>"+"<br>"+p.getP().getProductBrand()+"<br>"+p.getP().getProductCost()+"<br>");
-
+			}
+			temp=p.getP().getProductName();
 		}
 	}
 	//********************************VISWANATH WORK**************************************
@@ -378,30 +428,21 @@ public class UserController {
 
 		HttpSession  session=request.getSession();
 		String prod_id=(String)session.getAttribute("productId");
-		System.out.println("here"+prod_id);
+		
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		/*prod_id="P_21M_001";*/
 		List<Product> list = sc.getSuggestedProducts(prod_id);
-		List<Media> path = sc.getMediaPath1(list);
-
-		for (int i=0;i<list.size() && i< path.size();i++) {
-
-			out.print("<img src=\""+ipaddress+path.get(i).getMediaPath()+"\">");
-			out.print(list.get(i).getProductName());
-			out.println(list.get(i).getProductBrand());
-			out.println(list.get(i).getProductCost()+"<br>");
-//			out.println("<input type=\"checkbox\" value="+list.get(i).getProductName()+"/>"+"<a href=\"prod?prod_id="+list.get(i).getProductId()+"\">"+list.get(i).getProductName()+"</a>"+"<br>"+list.get(i).getProductBrand()+"<br>"+list.get(i).getProductCost()+"<br>");
-
+		Map<String,List<Media>> mapmedia=new HashMap<String,List<Media>>();
+		
+		for(Product p:list){
+		String path=sc.getMediaPath(p.getProductId()).get(0).getMediaPath();
+		out.print("<img src=\""+ipaddress+path+"\">");
+		out.print(p.getProductName());
+		out.println(p.getProductBrand());
+		out.println(p.getProductCost()+"<br>");
 		}
 	}
-
-
-
-
-
-
-
 	//*************************MRINAL WORK****************************************
 
 
@@ -428,23 +469,18 @@ public class UserController {
 		
 		sc.createFeedback(userid,pid,  feed, rate1 );
 		List<Feedback> flist= sc.getAll(pid);
+		double avg=avgrate(request);
 		out.print("<table>");
 		for(Feedback f:flist){ 
 			out.print("<tr><td>");
-			if(f.getUser().getUserId().equals("1")){
+			if(f.getUser().getUserId().equals("userid")){
 				out.print("<input type=\"radio\"  name=user id="+f.getFeedbackId()+" class=\"usercheck\" value="+f.getFeedbackId()+">");
 			}
 			out.println("User Id:\t"+f.getUser().getUserId()+"\tRating--:"+f.getRating()+"\tProd Id:"+f.getId()+"</td><td>\tContent:"+f.getFeedbackContent()+"</td><td>\tDate:"+f.getFeedbackDate()+"<br>");
 			out.print("</td></tr>");   
 		}
-		out.print("</table>");
-
-
-		avgrate(request);
-	}
-
-
-
+		out.print("</table>"+"<br>Average Rating:"+avg);
+		}
 	@RequestMapping(value="deletefeedback",method=RequestMethod.GET)
 	@ResponseBody public  void deleteFeedback(HttpServletRequest request,ModelMap map,HttpServletResponse response) throws IOException{
 
@@ -461,7 +497,7 @@ public class UserController {
 		out.print("<table>");
 		for(Feedback f:dlist){ 
 			out.print("<tr><td>");
-			if(f.getUser().getUserId().equals("1")){
+			if(f.getUser().getUserId().equals("userid")){
 				out.print("<input type=\"radio\"  name=user id="+f.getFeedbackId()+" class=\"usercheck\" value="+f.getFeedbackId()+">");
 			}
 			out.println("User Id:"+f.getUser().getUserId()+"</td><td>Content:"+f.getFeedbackContent()+"</td><td>Date:"+f.getFeedbackDate()+"<br>");
@@ -470,10 +506,6 @@ public class UserController {
 		}
 		out.print("</table>");
 	}
-
-
-	//view data
-
 	@RequestMapping(value="view1feedback",method=RequestMethod.GET)
 	@ResponseBody public  void viewFeedback(HttpServletRequest request,ModelMap map,HttpServletResponse response) throws IOException{
 
@@ -484,7 +516,8 @@ public class UserController {
 		
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		List<Feedback> flist= sc.getAll(pid);      
+		List<Feedback> flist= sc.getAll(pid);  
+		double avg=avgrate(request);
 		out.print("<table>");
 		for(Feedback f:flist){ 
 			out.print("<tr><td>");
@@ -494,12 +527,12 @@ public class UserController {
 			out.println("User Id:"+f.getUser().getUserId()+"</td><td>Content:"+f.getFeedbackContent()+"</td><td>Date:"+f.getFeedbackDate()+"<br>");
 			out.print("</td></tr>");        
 		}
-		out.print("</table>");
+		out.print("</table>"+"<br>Average Rating:"+avg);
 	}
-	public void  avgrate(HttpServletRequest request){		
+	public Double avgrate(HttpServletRequest request){		
 		HttpSession  session=request.getSession();	
 		String pid=(String) session.getAttribute("productId");	
-			
+			return sc.average(pid);
 	} 
 
 
@@ -519,18 +552,8 @@ public class UserController {
 			List<Product> midcontentlist=new ArrayList<Product>();
 			leftcontentlist=sc.sortRelatedProductOnSelect(brandCode);
 			/*=======================ghanshyam jsp==============================*/
-			out.println("<div align=\"center\">");
-			out.println("<table border=\"1\" bgcolor=\"skyblue\"><tr><th>SORT BY SELECTION</th></tr>");
-			out.println("<tr><td bgcolor=\"cyan\">");
-			out.println("<select value="+brandCode+"  name="+brandCode+" id="+brandCode+"  class=\"types11\"<br>");
-			out.println("<option value=\"\">Select Account ID</option>");	            
-			out.println("<option value=\"hl\" id="+brandCode+">Higher to lower</option>");		            
-			out.println("<option value=\"lh\">Lower to higher</option>");
-			out.println("<option value=\"br\">Best On Rating</option>");
-			out.println("</select>");
-			out.println("</tr></td>");
-			out.println("</table>");
-			out.println("</div>");
+			out.println("<input type=\"hidden\" name="+brandCode+" value="+brandCode+"id="+brandCode+"class=\"types11\" >");
+
 			/*========================ghanshyam jsp============================*/
 			for (ProductMedia p : leftcontentlist) {
 				Product prod = new Product();
@@ -538,9 +561,7 @@ public class UserController {
 				prod.setProductCost(p.getP().getProductCost());
 				out.print("<img src=\""+ipaddress+p.getM().getMediaPath()+"\">");
 				out.println("<input type=\"checkbox\" value="+p.getP().getProductName()+"/>"+"<a href=\"prod?prod_id="+p.getP().getProductId()+"\">"+p.getP().getProductName()+"</a>"+"<br>"+p.getP().getProductBrand()+"<br>"+p.getP().getProductCost()+"<br>");
-
 			}
-
 		}
 		else if(selectCode1.equals("lh")){
 			
@@ -553,28 +574,15 @@ public class UserController {
 
 			leftcontentlist=sc.sortRelatedProductOnSelectLowerTo(brandCode);
 			/*=======================ghanshyam jsp==============================*/
-			out.println("<div align=\"center\">");
-			out.println("<table border=\"1\" bgcolor=\"skyblue\"><tr><th>SORT BY SELECTION</th></tr>");
-			out.println("<tr><td bgcolor=\"cyan\">");
-			out.println("<select value="+brandCode+"  name="+brandCode+" id="+brandCode+"  class=\"types11\"<br>");
-			out.println("<option value=\"\">Select Account ID</option>");	            
-			out.println("<option value=\"hl\" id="+brandCode+">Higher to lower</option>");		            
-			out.println("<option value=\"lh\">Lower to higher</option>");
-			out.println("<option value=\"br\">Best On Rating</option>");
-			out.println("</select>");
-			out.println("</tr></td>");
-			out.println("</table>");
-			out.println("</div>");
+			out.println("<input type=\"hidden\" name="+brandCode+" value="+brandCode+"id="+brandCode+"class=\"types11\" >");
+
 			/*========================ghanshyam jsp============================*/
-
-
 			for (ProductMedia p : leftcontentlist) {
 				Product prod = new Product();
 				prod.setProductBrand(p.getP().getProductBrand());
 				prod.setProductCost(p.getP().getProductCost());
 				out.print("<img src=\""+ipaddress+p.getM().getMediaPath()+"\">");
 				out.println("<input type=\"checkbox\" value="+p.getP().getProductName()+"/>"+"<a href=\"prod?prod_id="+p.getP().getProductId()+"\">"+p.getP().getProductName()+"</a>"+"<br>"+p.getP().getProductBrand()+"<br>"+p.getP().getProductCost()+"<br>");
-
 			}
 		}
 		else if(selectCode1.equals("br")){
@@ -588,18 +596,9 @@ public class UserController {
 			List<Product> midcontentlist=new ArrayList<Product>();
 			leftcontentlist=sc.sortRelatedProductOnMostView(brandCode);
 			/*=======================ghanshyam jsp==============================*/
-			out.println("<div align=\"center\">");
-			out.println("<table border=\"1\" bgcolor=\"skyblue\"><tr><th>SORT BY SELECTION</th></tr>");
-			out.println("<tr><td bgcolor=\"cyan\">");
-			out.println("<select value="+brandCode+"  name="+brandCode+" id="+brandCode+"  class=\"types11\"<br>");
-			out.println("<option value=\"\">Select Account ID</option>");	            
-			out.println("<option value=\"hl\" id="+brandCode+">Higher to lower</option>");		            
-			out.println("<option value=\"lh\">Lower to higher</option>");
-			out.println("<option value=\"br\">Best On Rating</option>");
-			out.println("</select>");
-			out.println("</tr></td>");
-			out.println("</table>");
-			out.println("</div>");
+			
+			out.println("<input type=\"hidden\" name="+brandCode+" value="+brandCode+"id="+brandCode+"class=\"types11\" >");
+
 			/*========================ghanshyam jsp============================*/
 			for (ProductMedia p : leftcontentlist) {
 				Product prod = new Product();
@@ -622,9 +621,7 @@ public class UserController {
 	
 	@RequestMapping(value="addtowish",method=RequestMethod.GET)	
 	public String addToWishList(HttpServletRequest req,HttpServletResponse res){
-		HttpSession hs=req.getSession();/*
-		String userid=(String) hs.getAttribute("userid");
-		String productid=(String) hs.getAttribute("productid");*/
+		HttpSession hs=req.getSession();
 		String userid="C_1234";
 		String productid=(String) hs.getAttribute("productId");
 		boolean checkresult=sc.chechList(userid, productid);		
@@ -636,23 +633,15 @@ public class UserController {
 			return "Home";
 		}
 	}
-	
 	@RequestMapping(value="wishlist",method=RequestMethod.GET)
 	public String getAllWishList(ModelMap map){
 		List<Product> wishlist=sc.getAllWishListPro(); 	
-		List<String> medialist=new ArrayList<String>();
-		List<ProductMediaPath> wlist=new ArrayList<ProductMediaPath>();
-		/**/
+		List<ProductMedia> medialist=new ArrayList<ProductMedia>();
 		for(Product p:wishlist){
-			
-			String path=sc.getImageList(p.getProductId());
-			path="http://10.102.54.147:801"+path;
-			ProductMediaPath productimagelist= new ProductMediaPath(p,path);
-			
-			wlist.add(productimagelist);
+			ProductMedia productimage=new ProductMedia(p,sc.getMediaPath(p.getProductId()).get(0));
+			medialist.add(productimage);
 		}
-		map.put("wlist",wlist);
-		/*map.put("imagelist",medialist);*/
+		map.put("wlist",medialist);
 		return "ViewWishList";
 	}
 /*TIM+Praveen*/
@@ -667,7 +656,7 @@ public class UserController {
 		sc.addCart(items, session);
 		map.addAttribute("list", items);
 		
-		return "SearchResults";
+		return "DisplayCart";
 	}	
 
 	@RequestMapping(value = "DisplayCart", method = RequestMethod.GET)
@@ -758,7 +747,7 @@ public class UserController {
 	@RequestMapping(value="customerreturn",method=RequestMethod.POST)
 	public String enterReturnedItems(ModelMap map,
 			@RequestParam("prodid") String prodid) {
-System.out.println("here al;se"+prodid);
+
 		sc.setReturnedItems(prodid);
 		sc.setReturnStatus(prodid);
 		String userId="C_1234";
@@ -783,5 +772,14 @@ System.out.println("here al;se"+prodid);
 		map.put("list", l);
 		return "UserTransactionDetails";
 	}
+	/*Mayur*/
+	@RequestMapping("compareproducts")
+		public String compareProducts(HttpServletRequest request,ModelMap map){
+		HttpSession session=request.getSession();	
+		String productId=(String)session.getAttribute("productId");
+			String[] comparisonProducts=request.getParameterValues("similarProducts");
+			sc.getProductDescription(comparisonProducts,productId,map);
+			return "CompareProducts";
+		}
 
 }

@@ -24,7 +24,10 @@ public class Product implements Serializable {
 	private String productTag;
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + "]";
+		return "Product [productId=" + productId + ", productCreationdate="
+				+ productCreationdate + ", productName=" + productName
+				+ ", productTag=" + productTag + ", medias=" + medias
+				+ ", category=" + category + "]";
 	}
 
 	private Set<Media> medias;

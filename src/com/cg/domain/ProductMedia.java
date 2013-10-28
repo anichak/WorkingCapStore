@@ -7,6 +7,15 @@ public class ProductMedia {
 		return "ProductMedia [p=" + p + ", m=" + m + "]";
 	}
 	private Product p;
+	public ProductMedia(Product p, Media m) {
+		super();
+		this.p = p;
+		this.m = m;
+	}
+	public ProductMedia() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	private Media m;
 	
 	public Product getP() {

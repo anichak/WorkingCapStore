@@ -23,8 +23,8 @@ public interface IDaoMedia extends JpaRepository<Media,Long>{
 	@Query("select m.mediaPath from Media m where m.product.productId=?1")
 	public String mediaReturn(String productId);
 	@Transactional
-	@Query("select m.mediaId from Media m where m.product.productId=?1")
-	public Long mediaReturnId(String productId);
+	@Query("select m from Media m where m.product.productId=?1")
+	public List<Media> mediaReturnId(String productId);
 	@Transactional
 	@Query("select m.mediaPath from Media m where m.product.productId=?1")
 	public List<Media> mediaReturn1(String productId);
@@ -34,5 +34,15 @@ public interface IDaoMedia extends JpaRepository<Media,Long>{
 	@Transactional
 	@Query("select new com.cg.domain.MediaPath(m.mediaPath) from Wishlist w ,Media m where w.product.productId=m.product.productId")
 	public List<MediaPath> getByproductId();
+
+@Transactional
+@Query("select m.mediaPath from Media m")	
+	List<String> getMediaPath();
+
+@Transactional
+List<Media> findByMediaTypeAndProduct(String string, Product p);
+
+@Transactional
+List<Media> findMediaTypeByProduct(Product findByProductId);
 
 }

@@ -11,9 +11,13 @@ import com.cg.domain.Order;
 import com.cg.domain.Transaction;
 @Repository
 public interface IDaoOrder extends JpaRepository<Order,Long>{
-	@Transactional
+	/*@Transactional
 	@Query("select t from Transaction t where t.merchant.merchantId=?1")
-	public List<Transaction> getBymerchantId(String id);
+	public List<Transaction> getBymerchantId(String id);*/
+
+		@Transactional
+			@Query("select t from Transaction t,Order o where t.order.orderId=o.orderId and t.merchant.merchantId=?1 and o.orderStatus='processing'")
+			public List<Transaction> getBymerchantId(String id);
 	@Transactional
 	@Query("select o from Order o")
 	List<Order> getAllOrders();

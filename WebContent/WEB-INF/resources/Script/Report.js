@@ -71,7 +71,7 @@
 				$('.best-merchants').chartify(
 						'bar',
 						{
-							chartWidth : 700, // in pixels
+							chartWidth : 200, // in pixels
 							chartHeight : 700,
 							colors : [ "6cc05c", "433840", "6cc05c", "ff710f",
 									"ED1F27", "95a8ad", "0053aa" ],
@@ -126,7 +126,7 @@
 				$('.revenue').chartify(
 						'bar',
 						{
-							chartWidth : 1000, // in pixels
+							chartWidth : 700, // in pixels
 							chartHeight : 700,
 							colors : [ "6cc05c", "433840", "6cc05c", "ff710f",
 									"ED1F27", "95a8ad", "0053aa" ],

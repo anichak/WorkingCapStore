@@ -123,13 +123,13 @@
 			</table>
 		</c:if>
 		<c:if test="${empty list}"> NO RECORDS FOUND </c:if>
-		<form id="deleted" method="get" action="updateinventory">
+		<form id="deleted" name="form" method="get" action="updateinventory">
 			<div align="center">
-				Enter ID of Product: <input type="text" name="id" id="id" /><br />
-				Enter quantity to be updated:<input type="text" name="amt" id="amt" /><br />
-				<input type="submit" id="reduce" name="update" value="Reduce_stock" />
+				Enter ID of Product: <input type="text" name="id" id="id" onblur="formatforID(this)"/><br />
+				Enter quantity to be updated:<input type="text" name="amt" id="amt" onblur="formatforAmount(this)"/><br />
+				<input type="submit" id="reduce" name="update" value="Reduce_stock" onclick="return check()"/>
 				<input type="submit" id="increase" name="update"
-					value="Increase_Stock" />
+					value="Increase_Stock" onclick="return check()" />
 			</div>
 		</form>
 	</div>

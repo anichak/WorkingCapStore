@@ -10,9 +10,11 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.cg.domain.Category;
 import com.cg.domain.Media;
 import com.cg.domain.Merchant;
 import com.cg.domain.Product;
+import com.cg.domain.ProductDescription;
 import com.cg.domain.ProductWish;
 import com.cg.domain.Scheme;
 @Repository
@@ -57,6 +59,18 @@ public interface IDaoProduct extends JpaRepository<Product,String>{
 	 @Modifying
 	 @Query("update Product p set p.productStock=p.productStock+1 where p.productId = ?1")
 	 public void updateInventory(String productId);
+	@Transactional
+	@Query("select p.category from Product p where p.productId=?1")
+	Category findCategoryId(String prodId);
+
+	@Transactional
+	List<Product> findByCategory(Category category);
+
+	@Transactional
+	Product findByProductId(String productId);
+
+	@Transactional
+	List<ProductDescription> findProductdescriptionByProductId(String prodId);
 	
 	
 }

@@ -151,21 +151,27 @@ public class AdminController {
 		SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 		Date d=new Date();
 		
-		try {
-			while((line = br.readLine()) != null) {  
-				Merchant m=new Merchant();
-				Category cat=new Category();
-				String[] fields = line.split(",");
-				cat.setCategoryId(fields[1]);
-				m.setMerchantId(fields[2]);
-				Product p = new Product(fields[0],cat,m,fields[3],Double.parseDouble(fields[4]),d,fields[5],fields[6],Long.parseLong(fields[7]));
-				pojoList.add(p);
-				System.out.println(p);
+		 try {
+				while((line = br.readLine()) != null) {  
+					   Merchant m=new Merchant();
+					   Category cat=new Category();
+				       String[] fields = line.split(",");
+				       cat.setCategoryId(fields[1]);
+				       m.setMerchantId(fields[2]);
+				       String ins=fields[8];
+				     
+				       if(ins.equalsIgnoreCase("update")){
+				       Product p = new Product(fields[0],cat,m,fields[3],Double.parseDouble(fields[4]),d,fields[5],fields[6],Long.parseLong(fields[7]));
+				       pojoList.add(p);
+				      
+				       }
+				       else 
+				    	   continue;
+				   }
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		sc.addProduct(pojoList);
 		return "AddProductDescription";
 	}
@@ -270,9 +276,9 @@ public class AdminController {
 			@RequestParam("productQuantity") int productQuantity,
 			@RequestParam("hidd") long returnstatusId) {
 
-		sc.setReturnApprove(returnstatusId,productId);
+		sc.setReturnApprove(returnstatusId,productId,transactionId,productCost);
 
-		System.out.println("Controller--"+productId);
+		
 		
 		List<Returneditem> l1 = sc.storeDetails();
 		map.put("list1", l1);
@@ -299,8 +305,6 @@ public class AdminController {
 		return "ReturnValidationByAdmin";
 	}
 	/*Ravi Kiran*/
-	
-	
 	@RequestMapping(value="setpromomail",method=RequestMethod.GET) 
 	public String openSetEmailPage(){
 		return "SetEmailByAdmin";

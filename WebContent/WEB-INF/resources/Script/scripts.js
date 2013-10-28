@@ -84,7 +84,7 @@ $(function() {
     				}, 500);
     			});
 
-    			
+    			/*
     			$(function() {
     			      $('#slides').slidesjs({
     			        width: 980,
@@ -96,7 +96,7 @@ $(function() {
     			          swap: true
     			        }
     			      });
-    			    });		
+    			    });		*/
     			 function setdata(tmp){
     			  		document.getElementById("hidd").value=tmp.value;
     			  	}
@@ -226,6 +226,47 @@ $(function() {
     			  		
     			  		
     			  /*	});*/
+    			  		 
+    			  		function check(){
+    			  			if(document.form[0].value.length==0||document.form[1].value.length==0) 
+    			  			{ alert("Enter some value");
+    			  			 return false;
+    			  			}
+    			  		 }
+    			  		function formatforID(nam){
+
+    			  			 name=document.getElementById("id").value;
+    			  				
+    			  			 var pattern=/^([P]{1}[_][0-9]{2}[M]{1}[_][0-9]{4})$/;
+
+    			  			 if(!pattern.test(name)){
+
+    			  			 alert("Enter a valid  Product ID");
+    			  		   nam.value='';
+    			  			 name.focus();
+
+
+    			  			  }
+    			  		}
+    			  		function formatforAmount(nam){
+
+
+    			  			 name1=document.getElementById("amt").value;
+    			  			 var pattern=/^([0-9 ]*)$/;
+
+    			  			 if(!pattern.test(name1)){
+
+    			  			 alert("Enter a valid amount");
+    			  		    nam.value='';
+    			  			 name1.focus();
+
+
+
+
+
+    			  			  }
+    			  		}
+    			  		
     			
     			
     			

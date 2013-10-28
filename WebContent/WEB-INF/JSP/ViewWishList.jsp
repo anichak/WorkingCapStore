@@ -116,12 +116,12 @@
 					<c:forEach items="${wlist}" var="id">
 							<tr>
 							<form method="get" action="prod">
-								<td><c:out value="${id.product.productName}"></c:out>
-									<td><c:out value="${id.product.productBrand}"></c:out>
-									<td><img alt="<c:out value="${id.productmediapath}"></c:out>" src="${id.productmediapath}">
+								<td><c:out value="${id.p.productName}"></c:out>
+									<td><c:out value="${id.p.productBrand}"></c:out>
+									<td><img alt="<c:out value="${id.m.mediaPath}"></c:out>" src="${id.m.mediaPath}">
 											 <input type="submit" value="go to product"
 												id="viewproduct" name="viewproduct">
-												<input type="hidden" value="${id.product.productId}" id="prod_id" name="prod_id">
+												<input type="hidden" value="${id.p.productId}" id="prod_id" name="prod_id">
 												</td>
 							</form>
 							</tr>

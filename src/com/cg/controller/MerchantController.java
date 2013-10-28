@@ -70,7 +70,7 @@ public class MerchantController {
 	public String insertproductdescMerchant(@RequestParam("datasize")MultipartFile datasize) throws FileNotFoundException, NumberFormatException, ParseException{
 		List<ProductDescription> pojoList=sc.insertproductdescMerchant(datasize);
 		sc.addProductDesc(pojoList);
-		return "UpdateSuccessByMerchant";
+		return "UploadImagesByMerchant";
 	}
 	@RequestMapping(value="deleteproductbymerchant",method=RequestMethod.GET)
 
@@ -98,14 +98,14 @@ public class MerchantController {
 	public String insertproduct(@RequestParam("datasize")MultipartFile datasize,ModelMap map,HttpServletRequest request) throws NumberFormatException, ParseException, IOException{
 		List<Product> pojoList=sc.insertProduct(datasize,map);
 		List<ProductMediaPath> l=(List<ProductMediaPath>)map.get("productmedias");
-		String str=null;
+	/*	String str=null;
 		for(ProductMediaPath p:l){
 			String url=request.getContextPath();
-			/*sc.unzip(p.getProductmediapath());
+			sc.unzip(p.getProductmediapath());
 			sc.extracteFiles(url,p.getProductmediapath(),p.getProduct());
-			str=sc.getImages();*/
+			str=sc.getImages();
 			map.addAttribute("image", str);
-		}
+		}*/
 		sc.addProduct(pojoList);
 		return "AddProductDescriptionByMerchant";
 	}

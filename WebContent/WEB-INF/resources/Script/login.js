@@ -28,7 +28,7 @@ $(document).ready(function(){
         this.type = "password";
     }).blur(function(){
         this.type = "password";
-    })   
+    }) ;  
 });
 
 //Placeholder fixed for Internet Explorer
